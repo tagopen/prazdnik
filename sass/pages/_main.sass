@@ -23,20 +23,7 @@ body
     position: relative
     display: table-cell
     width: 1%
-  &__item 
-    display: block
-    margin: 0 auto
-    width: 50px
-    height: 50px
-    border-radius: 50%
-    overflow: hidden
-    background-color: #eee
-    font: 500 30px / 50px Arial, sans-serif
-    text-align: center
-    color: #fff
-    text-decoration: none
-    &:hover
-      color: #fff
+  &__line
     &:before,
     &:after
       content: ''
@@ -48,32 +35,61 @@ body
       top: 25px
       left: -50%
       background-color: #eee
-      z-index: -1
     &:after
       width: 0
+    &--hide
+      &:before,
+      &:after 
+        content: none
     &--active
+      &:after 
+        width: 100%
+        background: #9e2222
+        border-bottom: 1px solid #de3234
+        +transition(.4s ease-out all)
+  &__item 
+    position: relative
+    display: block
+    margin: 0 auto
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    overflow: hidden
+    background-color: #eee
+    font: 500 30px / 50px Arial, sans-serif
+    text-align: center
+    color: #fff
+    text-decoration: none
+    z-index: 2
+    cursor: default
+    &:hover
+      color: #fff
+    &:before
+      content: ''
+      +coverdiv
+      left: -100%
       +ts(0 -1px 0 #b72a2a)
       +bs(inset 0 -1px 0 #a02828)
       background: #e23e3b
       background: -webkit-linear-gradient(top,#e23e3b 0,#da262c 100%)
       background: -moz-linear-gradient(top,#e23e3b 0,#da262c 100%)
       background: linear-gradient(to bottom,#e23e3b 0,#da262c 100%)
-      +transition(.5s ease-out background)
-      transition-delay: .5s
-      &:after 
-        width: 100%
-        background: inherit
-        +transition(.5s ease-out all)
-    &--hideline
-      &:before,
-      &:after 
-        content: none
-  &__text 
+    &--active
+      &:before
+        left: 0
+        +transition(.3s ease-out all)
+        transition-delay: .4s
+  &__text
+    position: relative
+    z-index: 5
+  &__description
     display: block
     padding: 10px 15px
     font: 500 15px/15px Arial, sans-serif
     color: #999
     text-align: center
+    &--active
+      color: #000
   &__warning
     background: url(../img/warning.png) no-repeat left
     padding-left: 60px  
@@ -104,9 +120,6 @@ body
       border: 0
       font-size: 25px
       +br(5px) 
-.order__item--active
-  &+.order__text
-    color: #000
 .child
   &__image-box
     text-align: center

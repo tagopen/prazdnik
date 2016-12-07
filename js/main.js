@@ -54,8 +54,11 @@ $(document).ready( function() {
     if ($activeTab.index() > $firstTab) {
       var $idTab = '#' + $activeTab.attr('id');
       $('.order__item').each(function() {
-        if ($(this).attr('href') == $idTab) {
-          $(this).removeClass('order__item--active');
+        var $this = $(this);
+        if ($this.attr('href') == $idTab) {
+          $this.removeClass('order__item--active');
+          $this.siblings('.order__line').removeClass('order__line--active');
+          $this.siblings('.order__description').removeClass('order__description--active');
         }
       });
       $('.tabs__item').removeClass('tabs__item--active');
@@ -69,8 +72,12 @@ $(document).ready( function() {
     if ($activeTab.index() < $lastTab) {
       var $idTab = '#' + $nextTab.attr('id');
       $('.order__item').each(function() {
-        if ($(this).attr('href') == $idTab) {
-          $(this).addClass('order__item--active');
+        var $this = $(this);
+        if ($this.attr('href') == $idTab) {
+          $this.addClass('order__item--active');
+
+          $this.siblings('.order__line').addClass('order__line--active');
+          $this.siblings('.order__description').addClass('order__description--active');
         }
       });
       $('.tabs__item').removeClass('tabs__item--active');
