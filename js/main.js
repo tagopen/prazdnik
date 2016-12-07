@@ -86,11 +86,23 @@ $(document).ready( function() {
   });
 });
 
+
+
 $(document).ready(function(){
-  $('.child-gender__click').click( function () {
+  // select child(s)
+  
+  $('.child__click').on('click', function() {
+    var $childrean = $(this).data('childrean');
+    if ($childrean == '1') {
+      $('#childrean-2').hide();
+    } else {
+      $('#childrean-2').show();
+    }
+  });
+  // select gender
+  $('.child-gender__click').on('click', function() {
     var $gender = $(this).data('gender');
     $('.gender__select').removeClass('gender__select--active');
-    console.log($gender);
     $($gender + '.gender__select').addClass('gender__select--active');
   });
 });  
@@ -99,13 +111,14 @@ $(document).ready(function(){
   var selc = $(".gender__select :selected").text();
   $(".result").text(selc);
 });*/
-$(document).ready(function(){
+/*$(document).ready(function(){
   $(".gender__input").keyup(function () {
    var value = $(this).val();
    $(".result").text(value);
  }).keyup();
-});
+});*/
 
+// easter egg
 $(function () {
   var $startPosRope  = -$('.rope').outerHeight() / 2; 
   $('.ic-rope').on('mousedown', function(e) {

@@ -211,7 +211,7 @@ body
     padding-left: 60px  
     text-align: left
 .tabs
-  padding: 50px 100px
+  padding: 30px 60px
   text-align: center
   &__item
     display: none
@@ -229,48 +229,48 @@ body
   &__btn
     cursor: pointer
     &--prev
+      margin-top: 25px
       float: left
       border-bottom: 1px dashed #000
     &--next
+      padding: 15px 50px
       background: linear-gradient(to bottom,#e23e3b 0,#da262c 100%) 
       color: #fff
-      padding: 15px 50px
       text-align: center
       width: 220px
       border: 0
       font-size: 25px
       +br(5px) 
++comment('child style')
 .child
-  &__image-box
-    text-align: center
-    img
-      display: inline-block   
-  &__group
-    input[type="radio"]   
-      display: none
-      &:checked + label
-        background: linear-gradient(to bottom,#ffb619 0,#efa209 100%)
-        &:before
-          content: '\f00c'
-          position: absolute
-          left: 50px
-          font-family: FontAwesome
-          float: left
-          color: #fff
-    label
-      position: relative
-      border-radius: 5px
-      border-top: 1px solid #acacac
-      border-bottom: 1px solid #cacaca
-      margin: 0 10px
-      background: #acacac
-      color: #fff
-      font-size: 20px
-      text-shadow: 0 -1px 0 #b5b5b5
-      padding: 17px 20px 16px
-      width: 300px
-      overflow: hidden
-      cursor: pointer
+  &__img
+    margin: 0 auto
+  &__radiobtn  
+    display: none
+    &:checked + label
+      background: linear-gradient(to bottom,#ffb619 0,#efa209 100%)
+      &:before
+        content: '\f00c'
+        position: absolute
+        left: 50px
+        font-family: FontAwesome
+        float: left
+        color: #fff
+  label
+    position: relative
+    border-radius: 5px
+    border-top: 1px solid #acacac
+    border-bottom: 1px solid #cacaca
+    margin: 0 10px
+    background: #acacac
+    color: #fff
+    font-size: 20px
+    text-shadow: 0 -1px 0 #b5b5b5
+    padding: 17px 20px 16px
+    width: 300px
+    overflow: hidden
+    cursor: pointer
++comment('gender style')
 .gender
   &__select
     opacity: 0

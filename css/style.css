@@ -355,7 +355,7 @@ body {
 }
 
 .tabs {
-  padding: 50px 100px;
+  padding: 30px 60px;
   text-align: center;
 }
 .tabs__item {
@@ -379,13 +379,14 @@ body {
   cursor: pointer;
 }
 .navigation__btn--prev {
+  margin-top: 25px;
   float: left;
   border-bottom: 1px dashed #000;
 }
 .navigation__btn--next {
+  padding: 15px 50px;
   background: linear-gradient(to bottom, #e23e3b 0%, #da262c 100%);
   color: #fff;
-  padding: 15px 50px;
   text-align: center;
   width: 220px;
   border: 0;
@@ -396,19 +397,19 @@ body {
   border-radius: 5px;
 }
 
-.child__image-box {
-  text-align: center;
+/* ---------------------------------------- */
+/* C H I L D    S T Y L E                   */
+/* ---------------------------------------- */
+.child__img {
+  margin: 0 auto;
 }
-.child__image-box img {
-  display: inline-block;
-}
-.child__group input[type="radio"] {
+.child__radiobtn {
   display: none;
 }
-.child__group input[type="radio"]:checked + label {
+.child__radiobtn:checked + label {
   background: linear-gradient(to bottom, #ffb619 0%, #efa209 100%);
 }
-.child__group input[type="radio"]:checked + label:before {
+.child__radiobtn:checked + label:before {
   content: "";
   position: absolute;
   left: 50px;
@@ -416,7 +417,7 @@ body {
   float: left;
   color: #fff;
 }
-.child__group label {
+.child label {
   position: relative;
   border-radius: 5px;
   border-top: 1px solid #acacac;
@@ -432,6 +433,9 @@ body {
   cursor: pointer;
 }
 
+/* ---------------------------------------- */
+/* G E N D E R    S T Y L E                 */
+/* ---------------------------------------- */
 .gender__select {
   opacity: 0;
   display: none;
