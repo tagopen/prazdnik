@@ -1,12 +1,3 @@
-$(document).ready(function(){
-    $(".navbar").on("click",".navbar__point", function (event) {
-        event.preventDefault();
-        var id  = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top -$('.navbar').outerHeight()+2}, 1500);
-    });
-});
-
 // Equal Height plugin
 $.fn.equialHeight = function() {
   var $tallestcolumn = 0;
