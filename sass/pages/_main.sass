@@ -8,11 +8,16 @@ body
     margin: 20px 0
     padding: 79px 0 86px
     background-color: #fff
-  &__heading
+  &__head
     font-size: 30px
     color: #323232
     text-align: center
     margin-bottom: 50px
+  &__body
+
+  &__footer
+    padding: 27px 60px 0
+    border-top: 1px dashed #dbdbdb
   &__list
     display: table
     padding: 0 25px
@@ -97,8 +102,7 @@ body
 .tabs
   padding: 50px 100px
   text-align: center
-  border-bottom: 1px dashed #dbdbdb
-  &__item 
+  &__item
     display: none
     &--active 
       display: block
@@ -109,8 +113,13 @@ body
     background-color: #0e5cc1
     background-image: linear-gradient(-58deg, #5890d8 0%, #5890d8 0%, #0953b3 100%)  
 .navigation
-  text-align: center  
+  &__item 
+  text-align: center
   &__btn
+    cursor: pointer
+    &--prev
+      float: left
+      border-bottom: 1px dashed #000
     &--next
       background: linear-gradient(to bottom,#e23e3b 0,#da262c 100%) 
       color: #fff

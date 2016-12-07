@@ -125,11 +125,15 @@ body {
   padding: 79px 0 86px;
   background-color: #fff;
 }
-.order__heading {
+.order__head {
   font-size: 30px;
   color: #323232;
   text-align: center;
   margin-bottom: 50px;
+}
+.order__footer {
+  padding: 27px 60px 0;
+  border-top: 1px dashed #dbdbdb;
 }
 .order__list {
   display: table;
@@ -245,7 +249,6 @@ body {
 .tabs {
   padding: 50px 100px;
   text-align: center;
-  border-bottom: 1px dashed #dbdbdb;
 }
 .tabs__item {
   display: none;
@@ -263,6 +266,13 @@ body {
 
 .navigation {
   text-align: center;
+}
+.navigation__btn {
+  cursor: pointer;
+}
+.navigation__btn--prev {
+  float: left;
+  border-bottom: 1px dashed #000;
 }
 .navigation__btn--next {
   background: linear-gradient(to bottom, #e23e3b 0%, #da262c 100%);
