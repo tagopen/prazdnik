@@ -6,7 +6,8 @@ $(document).ready(function(){
         $('body,html').animate({scrollTop: top -$('.navbar').outerHeight()+2}, 1500);
     });
 });
-// Equal Height function
+
+// Equal Height plugin
 $.fn.equialHeight = function() {
   var $tallestcolumn = 0;
   var $currentHeight = 0;
@@ -79,8 +80,11 @@ $(document).ready( function() {
 });
 
 $(document).ready(function(){
-  $('.gender__click').click( function () {
-    $('.gender__man, .gender__woman').toggleClass('gender__active');
+  $('.child-gender__click').click( function () {
+    var $gender = $(this).data('gender');
+    $('.gender__select').removeClass('gender__select--active');
+    console.log($gender);
+    $($gender + '.gender__select').addClass('gender__select--active');
   });
 });  
 
