@@ -90,12 +90,13 @@ $(document).ready( function() {
 
 $(document).ready(function(){
   // select child(s)
-  
   $('.child__click').on('click', function() {
     var $childrean = $(this).data('childrean');
     if ($childrean == '1') {
+      $('#childrean-1').addClass('col-md-offset-3');
       $('#childrean-2').hide();
     } else {
+      $('#childrean-1').removeClass('col-md-offset-3');
       $('#childrean-2').show();
     }
   });
@@ -106,6 +107,18 @@ $(document).ready(function(){
     $($gender + '.gender__select').addClass('gender__select--active');
   });
 });  
+
+$(document).ready (function() {
+  var $cookie = $.cookie('personalID');
+  if ($cookie === null) {
+    $.cookie('personalID', ID());
+  }
+});
+
+// generate customer ID
+var ID = function () {
+  return '_' + Math.random().toString(36).substr(2, 9);
+};
 
 /*$(document).ready(function(){
   var selc = $(".gender__select :selected").text();
