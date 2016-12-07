@@ -231,6 +231,8 @@ body {
 .order__box {
   margin: 20px 0;
   padding: 79px 0 86px;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
   background-color: #fff;
 }
 .order__head {
@@ -378,6 +380,9 @@ body {
 .navigation__btn {
   cursor: pointer;
 }
+.navigation__btn:focus {
+  outline: none;
+}
 .navigation__btn--prev {
   margin-top: 25px;
   float: left;
@@ -403,13 +408,14 @@ body {
 .child__img {
   margin: 0 auto;
 }
-.child__radiobtn {
+
+.tabs-control__radiobtn {
   display: none;
 }
-.child__radiobtn:checked + label {
+.tabs-control__radiobtn:checked + .tabs-control__click {
   background: linear-gradient(to bottom, #ffb619 0%, #efa209 100%);
 }
-.child__radiobtn:checked + label:before {
+.tabs-control__radiobtn:checked + .tabs-control__click:before {
   content: "";
   position: absolute;
   left: 50px;
@@ -417,7 +423,7 @@ body {
   float: left;
   color: #fff;
 }
-.child label {
+.tabs-control__click {
   position: relative;
   border-radius: 5px;
   border-top: 1px solid #acacac;

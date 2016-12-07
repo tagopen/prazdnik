@@ -106,8 +106,6 @@ body
     -ms-transform: translate(0,0)
     transform: translate(0,0)
   
-
-
 .faa-vertical.animated,
 .faa-vertical.animated-hover:hover,
 .faa-parent.animated-hover:hover > .faa-vertical
@@ -118,6 +116,8 @@ body
   &__box
     margin: 20px 0
     padding: 79px 0 86px
+    border-radius: 3px
+    box-shadow: 0 1px 0 rgba(0,0,0,.2)
     background-color: #fff
   &__head
     font-size: 30px
@@ -228,6 +228,8 @@ body
   text-align: center
   &__btn
     cursor: pointer
+    &:focus
+      outline: none
     &--prev
       margin-top: 25px
       float: left
@@ -245,9 +247,10 @@ body
 .child
   &__img
     margin: 0 auto
+.tabs-control
   &__radiobtn  
     display: none
-    &:checked + label
+    &:checked + .tabs-control__click
       background: linear-gradient(to bottom,#ffb619 0,#efa209 100%)
       &:before
         content: '\f00c'
@@ -256,7 +259,7 @@ body
         font-family: FontAwesome
         float: left
         color: #fff
-  label
+  &__click
     position: relative
     border-radius: 5px
     border-top: 1px solid #acacac

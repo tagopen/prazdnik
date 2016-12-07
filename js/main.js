@@ -73,6 +73,29 @@ $(document).ready( function() {
       });
       $('.tabs__item').removeClass('tabs__item--active');
       $nextTab.addClass('tabs__item--active');
+      if ($('#tab-5').is(':visible')) {
+        var $resultHtml = '',
+            $number = '1',
+            $totalPrice = 0;
+        $('[data-toggle=cost]').each( function() {
+          if ($(this).is(':checked')) {
+            var $productPrice = $(this).data('price');
+            var $productDescr = $(this).data('description');
+            var $productTitle = $(this).data('title');
+            $resultHtml += '<tr>';
+            $resultHtml += '<td scope="row">' + $number + '<td>';
+            $resultHtml += '<td>' + $productTitle + '<td>';
+            $resultHtml += '<td>' + $productDescr + '<td>';
+            $resultHtml += '<td>' + $productPrice + ' гривен<td>';
+            $resultHtml += '</tr>';
+            $number ++;
+            $totalPrice += parseInt($productPrice);
+          }
+        });
+        $('.result').html($resultHtml);
+        $('.price__cost').text($totalPrice + ' гривен');
+
+      }
      }
   });
 });
@@ -81,7 +104,7 @@ $(document).ready( function() {
 
 $(document).ready(function(){
   // select child(s)
-  $('.child__click').on('click', function() {
+  $('.tabs-control__click').on('click', function() {
     var $childrean = $(this).data('childrean');
     if ($childrean == '1') {
       $('#childrean-1').addClass('col-md-offset-3');

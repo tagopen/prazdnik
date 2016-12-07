@@ -104,20 +104,35 @@
                 </li>
               </ul><!-- /.order -->
                 <div class="clearfix tabs">
-                  <div class="tabs__item tabs__item--active" id="tab-1">
-                    <a href="" class="tabs__package">1 пакет</a>
-                    <a href="" class="tabs__package">2 пакет</a>
-                    <a href="" class="tabs__package">3 пакет</a>
-                  </div>
+                  <div class="row tabs__item tabs__item--active package" id="tab-1">
+                    <div class="col-md-4 package__item">
+                        <div class="package__btn tabs-control">
+                          <input class="tabs-control__radiobtn" type="radio" name="package" id="package-1" data-toggle="cost" data-price="100" data-description="1" data-title="Пакет №:" checked>
+                          <label class="tabs-control__click" for="package-1">1 пакет</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4 package__item">
+                      <div class="package__btn tabs-control">
+                        <input class="tabs-control__radiobtn" type="radio" name="package" id="package-2" data-toggle="cost" data-price="100" data-description="2" data-title="Пакет №:">
+                        <label class="tabs-control__click" for="package-2">2 пакет</label>
+                      </div>
+                    </div>
+                    <div class="col-md-4 package__item">
+                      <div class="package__btn tabs-control">
+                        <input class="tabs-control__radiobtn" type="radio" name="package" id="package-3" data-toggle="cost" data-price="100" data-description="3" data-title="Пакет №:">
+                        <label class="tabs-control__click" for="package-3">3 пакет</label>
+                      </div>
+                    </div>
+                  </div><!-- /.tabs__item -->
                   <div class="tabs__item" id="tab-2">
                     <div class="row child">
                       <div class="col-sm-6 child__item">
                         <div class="child__icon">
                           <img src="img/one.png" alt="Мальчик" class="img-responsive child__img"/>
                         </div>
-                        <div class="child__btn">
-                          <input class="child__radiobtn" type="radio" name="radiobtn" id="rbtn1" checked>
-                          <label class="child__click" for="rbtn1" data-childrean="1">1 ребенок</label>
+                        <div class="child__btn tabs-control">
+                          <input class="tabs-control__radiobtn" type="radio" name="radiobtn" id="rbtn1" data-toggle="cost" data-price="100" data-description="Один ребёнок" data-title="Количество детей:" checked>
+                          <label class="tabs-control__click" for="rbtn1" data-childrean="1">1 ребенок</label>
                         </div>
                       </div><!-- /.child__item -->
 
@@ -125,9 +140,9 @@
                         <div class="child__icon">
                           <img src="img/two.png" alt="Девочка" class="img-responsive child__img">
                         </div>
-                        <div class="child__btn">
-                          <input class="child__radiobtn" type="radio" name="radiobtn" id="rbtn2">
-                          <label class="child__click" for="rbtn2" data-childrean="2">2 ребенка</label>
+                        <div class="child__btn tabs-control">
+                          <input class="tabs-control__radiobtn" type="radio" name="radiobtn" id="rbtn2" data-toggle="cost" data-price="200" data-description="2 ребёнка" data-title="Количество детей:">
+                          <label class="tabs-control__click" for="rbtn2" data-childrean="2">2 ребенка</label>
                         </div>
                       </div><!-- /.child__item -->
                     </div><!-- /.child -->
@@ -526,7 +541,7 @@
                         </div><!-- /.gender__group -->
 
                         <div class="gender__group">
-                          <input aria-invalid="false" class="gender__input" placeholder="Введите имя" required data-validation-required-message="Пожалуйста, заполните это поле" name="name" type="text">
+                          <input aria-invalid="false" class="gender__input" placeholder="Введите имя" required data-validation-required-message="Пожалуйста, заполните это поле" name="name" type="hidden">
                         </div><!-- /.gender__group -->
                       </div><!-- /.gender__item -->
                     </div><!-- /.gender -->
@@ -553,11 +568,10 @@
                           не указывать адрес корпоративной почты, а указывать адрес вашей личной электронной почты.</div> 
                           <div class="order__price price">
                             <div class="price__heading">Ваш заказ</div>
-                            <div class="row">
-                              <div class="col-xs-4 price__item">Видеопоздравление для </div>
-                              <div class="col-xs-4 price__item"><div class="result"></div></div>
-                              
-                            </div>
+                            <table class="table">
+                              <tbody class="result"></tbody>
+                            </table>
+                            <div class="price__total">Итоговая сумма заказа: <span class="price__cost"></span></div>
                           </div>
                         </div>
                 </div><!-- /.order__body -->
