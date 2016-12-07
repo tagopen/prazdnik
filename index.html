@@ -134,14 +134,19 @@
                   </div><!-- /.tabs__item -->
                   <div class="tabs__item" id="tab-3">
                     <div class="row gender">
-                      <div class="gender__item">
-                        <div class="gender__group child-gender">
-                          <input class="child-gender__radiobtn" type="radio" name="gender" id="rbtn11" checked>
-                          <label class="child-gender__click" for="rbtn11" data-gender="#male"><span></span>Мальчик</label>
-                          <input class="child-gender__radiobtn" type="radio" name="gender" id="rbtn12">
-                          <label class="child-gender__click" for="rbtn12" data-gender="#female"><span></span>Девочка</label>
-                        </div><!-- /.child-gender -->
-                        <div class="form-group">
+                      <div id="childrean-1" class="col-md-6 col-md-offset-3 gender__item">
+                        <div class="row gender__group child-gender">
+                          <div class="col-sm-6 child-gender__item">
+                            <input class="child-gender__radiobtn" type="radio" name="gender" id="rbtn11" checked>
+                            <label class="child-gender__click" for="rbtn11" data-gender="#male"><span></span>Мальчик</label>
+                          </div>
+                          <div class="col-sm-6 child-gender__item">
+                            <input class="child-gender__radiobtn" type="radio" name="gender" id="rbtn12">
+                            <label class="child-gender__click" for="rbtn12" data-gender="#female"><span></span>Девочка</label>
+                          </div>
+                        </div><!-- /.gender__group -->
+
+                        <div class="gender__group">
                           <select id="male" class="gender__select gender__select--active">
                             <option value="" disabled selected style="display: none;">Выберите имя из списка</option>
                             <option value="opt1">Абрам</option>
@@ -518,10 +523,11 @@
                             <option value="opt183">Янина</option>
                             <option value="opt184">Ярослава</option>                
                           </select>
-                          <div class="form-group">
-                            <input aria-invalid="false" class="gender__input" placeholder="Введите имя" required data-validation-required-message="Please enter your name." name="name" type="text">
-                          </div>
-                        </div>
+                        </div><!-- /.gender__group -->
+
+                        <div class="gender__group">
+                          <input aria-invalid="false" class="gender__input" placeholder="Введите имя" required data-validation-required-message="Пожалуйста, заполните это поле" name="name" type="text">
+                        </div><!-- /.gender__group -->
                       </div><!-- /.gender__item -->
                     </div><!-- /.gender -->
                   </div><!-- /.tabs__item -->
@@ -564,8 +570,6 @@
       </div><!-- /.row -->
     </div><!-- /.container -->
 </section><!-- /.order -->
- 
-
 
   <!-- jQuery -->
   <script src="js/jquery.js"></script>
@@ -579,6 +583,8 @@
   <!-- Validation Form JavaScript -->
   <script src="js/jqBootstrapValidation.js"></script>
   <script src="js/contact_me.js"></script>
+
+
 
   <!-- Custom JavaScript -->
   <script src="js/main.js"></script>
