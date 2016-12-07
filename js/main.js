@@ -105,3 +105,50 @@ $(document).ready(function(){
    $(".result").text(value);
  }).keyup();
 });
+
+$(function () {
+  var $startPosRope  = -$('.rope').outerHeight() / 2; 
+  $('.ic-rope').on('mousedown', function(e) {
+    var $startPosY     = e.pageY,
+        $currPosY      = e.pageY,
+        $ropeMove      = 0,
+        $actionPosY    = $startPosY + 150;
+        console.log($startPosRope);
+    $(document).mousemove(function(e){
+      $currPosY = e.pageY;
+      if ($currPosY >= $actionPosY) {
+        $('.rope').css({
+          opacity: '0'
+        });
+        $('body').css({
+          height    : '100%',
+          overflow  : 'hidden'
+        });
+        $('.order').slideUp();
+        $('body').html('<img class="hollocosta" src="img/hny.jpeg"/>');
+        $('.hollocosta').css({
+          position: 'absolute',
+          top: '0',
+          right: '0',
+          bottom: '0',
+          left: '0',
+          margin: 'auto'
+        });
+      } else {
+        if ($currPosY >= $startPosY) {
+            $ropeMove = $currPosY - $startPosY;
+            $('.rope').css({
+              top: $startPosRope + $ropeMove + 'px'
+            }); 
+        }
+      }
+    }); 
+  });
+
+  $('.ic-rope').on('mouseup', function(e) {
+    $(document).unbind('mousemove');
+      $('.rope').css({
+        top: $startPosRope + 'px'
+      });
+  });
+});

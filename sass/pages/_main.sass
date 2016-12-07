@@ -2,6 +2,117 @@
 body
   background: #6d1411 url(../img/icons/bg-order.png) repeat-y scroll center center
 +ic
+.rope
+  position: absolute
+  top: -50%
+  right: 125px
+  width: 115px
+  text-align: center
+  +transition(.7s ease-out opacity)
+  &__icon
+    position: relative
+    top: 40px
+    color: #fff
+.ic-rope
+  position: relative
+  width: 115px
+  height: 656px
+  background: url(../img/rope.png)
+  cursor: pointer
+  &:before
+    content: 'slide down the rope'
+    display: block
+    position: absolute
+    width: 150px
+    top: 100%
+    color: #fff
+
+@-webkit-keyframes vertical 
+  0% 
+    -webkit-transform: translate(0,-3px)
+    transform: translate(0,-3px)
+  
+
+  4% 
+    -webkit-transform: translate(0,3px)
+    transform: translate(0,3px)
+  
+
+  8% 
+    -webkit-transform: translate(0,-3px)
+    transform: translate(0,-3px)
+  
+
+  12% 
+    -webkit-transform: translate(0,3px)
+    transform: translate(0,3px)
+  
+
+  16% 
+    -webkit-transform: translate(0,-3px)
+    transform: translate(0,-3px)
+  
+
+  20% 
+    -webkit-transform: translate(0,3px)
+    transform: translate(0,3px)
+  
+
+  22% 
+    -webkit-transform: translate(0,0)
+    transform: translate(0,0)
+  
+
+
+@keyframes vertical 
+  0% 
+    -webkit-transform: translate(0,-3px)
+    -ms-transform: translate(0,-3px)
+    transform: translate(0,-3px)
+  
+
+  4% 
+    -webkit-transform: translate(0,3px)
+    -ms-transform: translate(0,3px)
+    transform: translate(0,3px)
+  
+
+  8% 
+    -webkit-transform: translate(0,-3px)
+    -ms-transform: translate(0,-3px)
+    transform: translate(0,-3px)
+  
+
+  12% 
+    -webkit-transform: translate(0,3px)
+    -ms-transform: translate(0,3px)
+    transform: translate(0,3px)
+  
+
+  16% 
+    -webkit-transform: translate(0,-3px)
+    -ms-transform: translate(0,-3px)
+    transform: translate(0,-3px)
+  
+
+  20% 
+    -webkit-transform: translate(0,3px)
+    -ms-transform: translate(0,3px)
+    transform: translate(0,3px)
+  
+
+  22% 
+    -webkit-transform: translate(0,0)
+    -ms-transform: translate(0,0)
+    transform: translate(0,0)
+  
+
+
+.faa-vertical.animated,
+.faa-vertical.animated-hover:hover,
+.faa-parent.animated-hover:hover > .faa-vertical
+  -webkit-animation: vertical 2s ease infinite
+  animation: vertical 2s ease infinite
 +comment('order style')
 .order
   &__box
