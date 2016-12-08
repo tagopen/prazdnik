@@ -2,6 +2,20 @@
 body
   background: #6d1411 url(../img/icons/bg-order.png) repeat-y scroll center center
 +ic
+.heading
+  margin-bottom: 25px
+  font-size: 30px
+  color: #323232
+  text-align: center
+.warning
+  background: transparent url(../img/icons/warning.png) no-repeat scroll top left
+  padding-left: 60px 
+  min-height: 46px 
+.notify
+  display: inline-block
+  padding-left: 32px
+  background: transparent url(../img/icons/notify.png) no-repeat scroll top left
+  min-height: 21px
 .rope
   position: absolute
   top: -50%
@@ -120,10 +134,8 @@ body
     box-shadow: 0 1px 0 rgba(0,0,0,.2)
     background-color: #fff
   &__head
-    font-size: 30px
-    color: #323232
-    text-align: center
-    margin-bottom: 50px
+    padding: 0 60px 30px
+    border-bottom: 1px dashed #dbdbdb
   &__body
 
   &__footer
@@ -131,8 +143,8 @@ body
     border-top: 1px dashed #dbdbdb
   &__list
     display: table
-    padding: 0 25px
-    border-bottom: 1px dashed #dbdbdb
+    margin: 0 -25px
+    padding: 0
     &--unstyle 
       list-style-type: none
   &__step 
@@ -206,13 +218,9 @@ body
     text-align: center
     &--active
       color: #000
-  &__warning
-    background: url(../img/warning.png) no-repeat left
-    padding-left: 60px  
-    text-align: left
+      font-weight: 600
 .tabs
   padding: 30px 60px
-  text-align: center
   &__item
     display: none
     &--active 
@@ -247,20 +255,19 @@ body
 .child
   &__img
     margin: 0 auto
-.tabs-control
-  &__radiobtn  
+.checkbox-btn
+  &__control  
     display: none
-    &:checked + .tabs-control__click
+    &:checked + .checkbox-btn__box
       background: linear-gradient(to bottom,#ffb619 0,#efa209 100%)
       &:before
         content: '\f00c'
-        position: absolute
-        left: 50px
         font-family: FontAwesome
-        float: left
         color: #fff
-  &__click
+  &__box
     position: relative
+    padding: 17px 20px 16px
+    width: 300px
     border-radius: 5px
     border-top: 1px solid #acacac
     border-bottom: 1px solid #cacaca
@@ -269,10 +276,14 @@ body
     color: #fff
     font-size: 20px
     text-shadow: 0 -1px 0 #b5b5b5
-    padding: 17px 20px 16px
-    width: 300px
     overflow: hidden
     cursor: pointer
+    text-align: center
+    &:before
+      position: relative
+      margin-right: -20px
+      right: 35px
+
 +comment('gender style')
 .gender
   &__select
@@ -296,11 +307,11 @@ body
     outline: 0
     white-space: nowrap
     margin-bottom: 30px
-.child-gender     
-  &__radiobtn
+.radio-btn
+  &__control
     display: none
-    &:checked+label 
-      span
+    &:checked+.radio-btn__box 
+      .radio-btn__icon
         &:after
           position: absolute
           content: ''
@@ -310,27 +321,58 @@ body
           width: 10px
           top: 5px
           left: 5px
-  &__radiobtn+label
+        &--check
+          &:before
+            content: '\f00c'
+            font: 400 23px/17px FontAwesome
+            color: #f2b133
+          &:after
+            content: none
+  &__box
     cursor: pointer
     margin-right: 20px
-    span
-      position: relative
-      display: inline-block
-      height: 20px
-      width: 20px
-      margin-bottom: -4px
-      margin-right: 15px
-      background-color: #cecece
-      +br(50%)
-      &:before
-        content: ''
-        +br(50%)
-        background-color: #fff
-        height: 18px
-        width: 18px
-        position: absolute
-        left: 1px
-        top: 1px
-.photo
-  &__download
-    display: inline-block !important
+    &--square
+      +br(0)
+  &__icon
+    position: relative
+    display: inline-block
+    height: 20px
+    width: 20px
+    margin-bottom: -4px
+    margin-right: 15px
+    background-color: #cecece
+    +br(50%)
+    &:before
+      content: ''
+      border-radius: inherit
+      background-color: #fff
+      height: 18px
+      width: 18px
+      position: absolute
+      left: 1px
+      top: 1px
+    &--check
+      +br(0)
+.download
+  &__heading
+    margin-bottom: 25px
+  &__select
+    float: left
+  &__file
+    position: absolute
+    margin-left: -99999px
+  &__btn
+    padding: 10px 17px 9px
+    border-radius: 5px
+    border-bottom: 1px solid #d68c22
+    box-shadow: 0 1px 1px #d9d9d9
+    background: #ffb619
+    background: -webkit-linear-gradient(top,#ffb619 0,#efa30a 100%)
+    background: -moz-linear-gradient(top,#ffb619 0,#efa30a 100%)
+    background: linear-gradient(to bottom,#ffb619 0,#efa30a 100%)
+    text-shadow: 0 -1px 0 #ed8603
+    color: #fff
+    cursor: pointer
+.price
+  &__cost
+    font-weight: bold

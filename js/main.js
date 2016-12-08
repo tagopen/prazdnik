@@ -104,18 +104,20 @@ $(document).ready( function() {
 
 $(document).ready(function(){
   // select child(s)
-  $('.tabs-control__click').on('click', function() {
+  $('.checkbox-btn__box').on('click', function() {
     var $childrean = $(this).data('childrean');
     if ($childrean == '1') {
       $('#childrean-1').addClass('col-md-offset-3');
       $('#childrean-2').hide();
+      $('.download__heading').text('Загрузите фотографию ребёнка. Фотография ребёнка появится в Книге Деда Мороза');
     } else {
       $('#childrean-1').removeClass('col-md-offset-3');
       $('#childrean-2').show();
+      $('.download__heading').text('Загрузите одну совместную фотографию двух детей. Фотография детей появится в Книге <br>Деда Мороза');
     }
   });
   // select gender
-  $('.child-gender__click').on('click', function() {
+  $('.child-gender__item .radio-btn__box').on('click', function() {
     var $gender = $(this).data('gender');
     $('.gender__select').removeClass('gender__select--active');
     $($gender + '.gender__select').addClass('gender__select--active');

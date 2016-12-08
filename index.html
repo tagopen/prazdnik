@@ -74,9 +74,9 @@
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
           <div class="order__box">
-            <div class="order__head"><h1 class="heading"></h1>Заказать видеопоздравление</div>
-
-            <div class="order__body">
+            <div class="order__head">
+              <h1 class="heading">Заказать видеопоздравление</h1>
+              
               <ul class="order__list order__list--unstyle">
                 <li class="order__step">
                   <i class="order__line order__line--active order__line--hide"></i>
@@ -102,25 +102,27 @@
                   <a href="#tab-5" class="order__item"><span class="order__text">5</span></a>
                   <span class="order__description">Контактные данные</span>
                 </li>
-              </ul><!-- /.order -->
+              </ul><!-- /.order__list -->
+            </div><!-- /.order__head -->
+            <div class="order__body">
                 <div class="clearfix tabs">
                   <div class="row tabs__item tabs__item--active package" id="tab-1">
                     <div class="col-md-4 package__item">
-                        <div class="package__btn tabs-control">
-                          <input class="tabs-control__radiobtn" type="radio" name="package" id="package-1" data-toggle="cost" data-price="100" data-description="1" data-title="Пакет №:" checked>
-                          <label class="tabs-control__click" for="package-1">1 пакет</label>
+                        <div class="package__btn checkbox-btn">
+                          <input class="checkbox-btn__control" type="radio" name="package" id="package-1" data-toggle="cost" data-price="100" data-description="1" data-title="Пакет №:" checked>
+                          <label class="checkbox-btn__box" for="package-1">1 пакет</label>
                         </div>
                     </div>
                     <div class="col-md-4 package__item">
-                      <div class="package__btn tabs-control">
-                        <input class="tabs-control__radiobtn" type="radio" name="package" id="package-2" data-toggle="cost" data-price="100" data-description="2" data-title="Пакет №:">
-                        <label class="tabs-control__click" for="package-2">2 пакет</label>
+                      <div class="package__btn checkbox-btn">
+                        <input class="checkbox-btn__control" type="radio" name="package" id="package-2" data-toggle="cost" data-price="200" data-description="2" data-title="Пакет №:">
+                        <label class="checkbox-btn__box" for="package-2">2 пакет</label>
                       </div>
                     </div>
                     <div class="col-md-4 package__item">
-                      <div class="package__btn tabs-control">
-                        <input class="tabs-control__radiobtn" type="radio" name="package" id="package-3" data-toggle="cost" data-price="100" data-description="3" data-title="Пакет №:">
-                        <label class="tabs-control__click" for="package-3">3 пакет</label>
+                      <div class="package__btn checkbox-btn">
+                        <input class="checkbox-btn__control" type="radio" name="package" id="package-3" data-toggle="cost" data-price="300" data-description="3" data-title="Пакет №:">
+                        <label class="checkbox-btn__box" for="package-3">3 пакет</label>
                       </div>
                     </div>
                   </div><!-- /.tabs__item -->
@@ -130,9 +132,9 @@
                         <div class="child__icon">
                           <img src="img/one.png" alt="Мальчик" class="img-responsive child__img"/>
                         </div>
-                        <div class="child__btn tabs-control">
-                          <input class="tabs-control__radiobtn" type="radio" name="radiobtn" id="rbtn1" data-toggle="cost" data-price="100" data-description="Один ребёнок" data-title="Количество детей:" checked>
-                          <label class="tabs-control__click" for="rbtn1" data-childrean="1">1 ребенок</label>
+                        <div class="child__btn checkbox-btn">
+                          <input class="checkbox-btn__control" type="radio" name="radiobtn" id="rbtn1" data-toggle="cost" data-price="100" data-description="1 ребёнок" data-title="Количество детей:" checked>
+                          <label class="checkbox-btn__box" for="rbtn1" data-childrean="1">1 ребенок</label>
                         </div>
                       </div><!-- /.child__item -->
 
@@ -140,9 +142,9 @@
                         <div class="child__icon">
                           <img src="img/two.png" alt="Девочка" class="img-responsive child__img">
                         </div>
-                        <div class="child__btn tabs-control">
-                          <input class="tabs-control__radiobtn" type="radio" name="radiobtn" id="rbtn2" data-toggle="cost" data-price="200" data-description="2 ребёнка" data-title="Количество детей:">
-                          <label class="tabs-control__click" for="rbtn2" data-childrean="2">2 ребенка</label>
+                        <div class="child__btn checkbox-btn">
+                          <input class="checkbox-btn__control" type="radio" name="radiobtn" id="rbtn2" data-toggle="cost" data-price="200" data-description="2 ребёнка" data-title="Количество детей:">
+                          <label class="checkbox-btn__box" for="rbtn2" data-childrean="2">2 ребенка</label>
                         </div>
                       </div><!-- /.child__item -->
                     </div><!-- /.child -->
@@ -151,13 +153,13 @@
                     <div class="row gender">
                       <div id="childrean-1" class="col-md-6 col-md-offset-3 gender__item">
                         <div class="row gender__group child-gender">
-                          <div class="col-sm-6 child-gender__item">
-                            <input class="child-gender__radiobtn" type="radio" name="gender" id="rbtn11" checked>
-                            <label class="child-gender__click" for="rbtn11" data-gender="#male"><span></span>Мальчик</label>
+                          <div class="col-sm-6 child-gender__item radio-btn">
+                            <input class="radio-btn__control" type="radio" name="gender" id="rbtn11" checked>
+                            <label class="radio-btn__box" for="rbtn11" data-gender="#male"><span class="radio-btn__icon"></span>Мальчик</label>
                           </div>
-                          <div class="col-sm-6 child-gender__item">
-                            <input class="child-gender__radiobtn" type="radio" name="gender" id="rbtn12">
-                            <label class="child-gender__click" for="rbtn12" data-gender="#female"><span></span>Девочка</label>
+                          <div class="col-sm-6 child-gender__item radio-btn">
+                            <input class="radio-btn__control" type="radio" name="gender" id="rbtn12">
+                            <label class="radio-btn__box" for="rbtn12" data-gender="#female"><span class="radio-btn__icon"></span>Девочка</label>
                           </div>
                         </div><!-- /.gender__group -->
 
@@ -547,11 +549,32 @@
                     </div><!-- /.gender -->
                   </div><!-- /.tabs__item -->
                   <div class="tabs__item" id="tab-4">
-                    <p>Загрузите фотографию ребёнка. Фотография ребёнка появится в Книге Деда Мороза</p>
-                    <form class="text-center" enctype="multipart" method="post">
-                     <input class="photo__download" type="file" name="photo">
-                     </form> 
-                     <p>Просмотр форографии ребенка Дедом Морозом + 15 грн</p>
+                    <div class="row download">
+                      <div class="col-md-12 text-center download__heading">Загрузите фотографию ребёнка. Фотография ребёнка появится в Книге <br>Деда Мороза</div>
+
+                      <form class="col-md-5 col-md-offset-1 text-center download__form" enctype="multipart" method="post">
+                        <label for="original-photo" class="download__btn">
+                          <input id="original-photo" class="download__file" type="file" name="photo" accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|images/*">
+                          Загрузить фотографию
+                        </label>
+                      </form> 
+                      <div class="col-md-6">
+                        <p class="download__warning warning">Поддерживаемые форматы фотографии: jpg, bmp, png</p>
+                      </div>
+                      <div class="col-md-4 col-md-offset-4">
+                        <div class="download__select radio-btn">
+                          <input class="radio-btn__control" type="radio" name="download" id="download-true" data-toggle="cost" data-price="15" data-description="1 фотография" data-title="Просмотр фотографии:" checked>
+                          <label class="radio-btn__box radio-btn-btn__box--check" for="download-true"><span class="radio-btn__icon radio-btn__icon--check"></span>Добавить фото</label>
+                        </div>
+                        <div class="download__select radio-btn">
+                          <input class="radio-btn__control" type="radio" name="download" id="download-false">
+                          <label class="radio-btn__box radio-btn-btn__box--check" for="download-false"><span class="radio-btn__icon radio-btn__icon--check"></span>Без фото</label>
+                        </div>
+                      </div>
+                      <div class="col-md-12 text-center">
+                        <div class="download__notify notify">Просмотр форографии ребенка с Дедом Морозом + 15 грн</div>
+                      </div>
+                    </div>
                   </div>
                   <div class="clearfix tabs__item" id="tab-5">
                     <form class="clearfix modal__form" method="post">
@@ -563,7 +586,7 @@
                             <input aria-invalid="false" class="form-control modal__input form__mail" placeholder="Введите ваш E-mail" required data-validation-required-message="Please enter your phone number." name="email" type="email">
                           </div>
                         </form>
-                        <div class="order__warning">На указанный вами адрес электронной почты придёт ссылка для
+                        <div class="order__warning warning">На указанный вами адрес электронной почты придёт ссылка для
                           скачивания видеопоздравления. Чтобы избежать попадания нашего письма в спам-фильтры, рекомендуем
                           не указывать адрес корпоративной почты, а указывать адрес вашей личной электронной почты.</div> 
                           <div class="order__price price">
