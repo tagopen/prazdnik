@@ -461,6 +461,9 @@ body {
 /* ---------------------------------------- */
 /* G E N D E R    S T Y L E                 */
 /* ---------------------------------------- */
+.gender__item--hidden {
+  display: none;
+}
 .gender__select {
   opacity: 0;
   display: none;
