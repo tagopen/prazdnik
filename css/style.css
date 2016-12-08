@@ -369,6 +369,9 @@ body {
   color: #000;
   font-weight: 600;
 }
+.order__warning {
+  margin-bottom: 20px;
+}
 
 .tabs {
   padding: 30px 60px;
@@ -573,6 +576,13 @@ body {
   cursor: pointer;
 }
 
+.price__heading {
+  margin-bottom: 20px;
+  font: 400 20px/20px Arial, sans-sesrif;
+}
 .price__cost {
   font-weight: bold;
+}
+.price__total {
+  padding: 0 8px;
 }

@@ -35,12 +35,13 @@ $(function() {
 
 // Advatage button
 $(document).ready( function() {
-  var $firstTab = $('.tabs__item').first().index();
-  var $lastTab = $('.tabs__item').last().index();
+  var $firstTab = $('.tabs__item').first().index(),
+      $lastTab = $('.tabs__item').last().index(),
+      $navigationBtnNext = $('.navigation__btn--next').text()
   
   $('.navigation__btn--prev').on('click', function() {
-    var $activeTab = $('.tabs__item--active');
-    var $prevTab = $activeTab.prev();
+    var $activeTab = $('.tabs__item--active'),
+        $prevTab = $activeTab.prev();
     
     if ($activeTab.index() > $firstTab) {
       var $idTab = '#' + $activeTab.attr('id');
@@ -54,6 +55,7 @@ $(document).ready( function() {
       });
       $('.tabs__item').removeClass('tabs__item--active');
       $prevTab.addClass('tabs__item--active');
+      $('.navigation__btn--next').text($navigationBtnNext);
     }
   });
   
@@ -77,16 +79,18 @@ $(document).ready( function() {
         var $resultHtml = '',
             $number = '1',
             $totalPrice = 0;
+
+        $('.navigation__btn--next').text('Заказать');
         $('[data-toggle=cost]').each( function() {
           if ($(this).is(':checked')) {
             var $productPrice = $(this).data('price');
             var $productDescr = $(this).data('description');
             var $productTitle = $(this).data('title');
             $resultHtml += '<tr>';
-            $resultHtml += '<td scope="row">' + $number + '<td>';
-            $resultHtml += '<td>' + $productTitle + '<td>';
-            $resultHtml += '<td>' + $productDescr + '<td>';
-            $resultHtml += '<td>' + $productPrice + ' гривен<td>';
+            $resultHtml += '<td scope="row">' + $number + '</td>';
+            $resultHtml += '<td>' + $productTitle + '</td>';
+            $resultHtml += '<td><b>' + $productDescr + '</b></td>';
+            $resultHtml += '<td class="text-right"><b>' + $productPrice + ' гривен</b></td>';
             $resultHtml += '</tr>';
             $number ++;
             $totalPrice += parseInt($productPrice);
@@ -94,7 +98,6 @@ $(document).ready( function() {
         });
         $('.result').html($resultHtml);
         $('.price__cost').text($totalPrice + ' гривен');
-
       }
      }
   });
