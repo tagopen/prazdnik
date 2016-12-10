@@ -117,6 +117,10 @@ body {
   vertical-align: middle;
 }
 
+.img-responsive {
+  margin: 0 auto;
+}
+
 .heading {
   margin-bottom: 25px;
   font-size: 30px;
@@ -137,6 +141,7 @@ body {
   min-height: 21px;
 }
 
+/* easter egg */
 .rope {
   position: absolute;
   top: -50%;
@@ -148,6 +153,7 @@ body {
   -webkit-transition: 0.7s ease-out opacity;
   -ms-transition: 0.7s ease-out opacity;
   transition: 0.7s ease-out opacity;
+  z-index: 999;
 }
 .rope__icon {
   position: relative;
@@ -243,6 +249,37 @@ body {
 .faa-parent.animated-hover:hover > .faa-vertical {
   -webkit-animation: vertical 2s ease infinite;
   animation: vertical 2s ease infinite;
+}
+
+.flip--active .flip__box {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.flip__box {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.flip__front, .flip__back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.flip__front {
+  z-index: 2;
+}
+.flip__back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  display: none;
 }
 
 /* ---------------------------------------- */

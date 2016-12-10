@@ -2,6 +2,8 @@
 body
   background: #6d1411 url(../img/icons/bg-order.png) repeat-y scroll center center
 +ic
+.img-responsive
+  margin: 0 auto
 .heading
   margin-bottom: 25px
   font-size: 30px
@@ -16,6 +18,7 @@ body
   padding-left: 32px
   background: transparent url(../img/icons/notify.png) no-repeat scroll top left
   min-height: 21px
++cm('easter egg')
 .rope
   position: absolute
   top: -50%
@@ -23,6 +26,7 @@ body
   width: 115px
   text-align: center
   +transition(.7s ease-out opacity)
+  z-index: 999
   &__icon
     position: relative
     top: 40px
@@ -125,6 +129,26 @@ body
 .faa-parent.animated-hover:hover > .faa-vertical
   -webkit-animation: vertical 2s ease infinite
   animation: vertical 2s ease infinite
+.flip 
+  &--active
+    .flip__box
+      +transform( rotateY(180deg) )
+  &__box
+    transition: 0.6s
+    transform-style: preserve-3d
+    position: relative
+  &__front,
+  &__back 
+    backface-visibility: hidden
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+  &__front 
+    z-index: 2
+  &__back
+    +transform( rotateY(180deg) )
+    display: none
 +comment('order style')
 .order
   &__box
