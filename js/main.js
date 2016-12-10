@@ -35,7 +35,26 @@ $(function() {
   });
 });
 
-// Advatage button
+$(function() {
+  var getVariable = 'step';
+  if( window.location.toString().indexOf(getVariable +'=') != -1) {
+    var number=(window.location.toString().substr(window.location.toString().indexOf(getVariable+'=')+ getVariable.length+1,50)).toLowerCase();  
+    if( number.indexOf('&') != -1) {
+      number=(number.substr(0,number.indexOf('&')));
+    }
+
+    if ( (number == '1') || (number == '2') || (number == '3')) {
+      var $tabItem = $('.order__item[href=#tab-2]');
+      $('.tabs__item').removeClass('tabs__item--active');
+      $('#tab-2').addClass('tabs__item--active');
+      $tabItem.addClass('order__item--active');
+      $tabItem.siblings('.order__line').addClass('order__line--active');
+      $tabItem.siblings('.order__description').addClass('order__description--active');
+    }
+  }
+});
+
+// navigation button
 $(document).ready( function() {
   var $firstTab = $('.tabs__item').first().index(),
       $lastTab = $('.tabs__item').last().index(),
@@ -109,7 +128,7 @@ $(document).ready( function() {
 
 $(document).ready(function(){
   // select child(s)
-  $('.checkbox-btn__box').on('click', function() {
+  $('.child__btn .checkbox-btn__box').on('click', function() {
     var $childrean = $(this).data('childrean');
     if ($childrean == '1') {
       $('#childrean-1').addClass('col-md-offset-3');
@@ -124,8 +143,8 @@ $(document).ready(function(){
   // select gender
   $('.child-gender__item .radio-btn__box').on('click', function() {
     var $gender = $(this).data('gender');
-    $('.gender__select').removeClass('gender__select--active');
-    $($gender + '.gender__select').addClass('gender__select--active');
+    $(this).parents('.gender__item').find('.gender__select').removeClass('gender__select--active');
+    $(this).parents('.gender__item').find($gender).addClass('gender__select--active');
   });
 });  
 // generate personal ID

@@ -505,6 +505,9 @@ body {
 /* ---------------------------------------- */
 /* G E N D E R    S T Y L E                 */
 /* ---------------------------------------- */
+.gender__group {
+  margin: 20px 0;
+}
 .gender__item--hidden {
   display: none;
 }
@@ -532,7 +535,9 @@ body {
   position: relative;
   outline: 0;
   white-space: nowrap;
-  margin-bottom: 30px;
+}
+.gender__notify {
+  margin-top: 20px;
 }
 
 .radio-btn__control {
