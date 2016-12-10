@@ -13,6 +13,8 @@ $.fn.equialHeight = function() {
   return $(this);
 } 
 
+$('.package__photo').equialHeight();
+
 // Old browser notification
 $(function() { 
   $.reject({
