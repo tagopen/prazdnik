@@ -122,8 +122,8 @@
 
   $mail->IsSendmail();
 
-  $from = 'no-reply@tagopen.com';
-  $to = "Artem2431@gmail.com";
+  $from = 'no-reply@video-pozdravlenie.com';
+  $to = "YaDedushkaMoroz2017@gmail.com";
   $mail->SetFrom($from, HOST_NAME);
   $mail->AddAddress($to, 'Name Surname');
 
