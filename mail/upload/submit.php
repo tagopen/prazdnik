@@ -16,7 +16,7 @@ if( isset( $_GET['uploadfiles'] ) ){
       $custemerID = '';
     }
  
-    $uploaddir = './uploads/' . $custemerID; // . - текущая папка где находится submit.php
+    $uploaddir = 'uploads/' . $custemerID; // . - текущая папка где находится submit.php
  
     // Создадим папку если её нет
  
@@ -25,7 +25,7 @@ if( isset( $_GET['uploadfiles'] ) ){
     // переместим файлы из временной директории в указанную
     foreach( $_FILES as $file ){
         if( move_uploaded_file( $file['tmp_name'], $uploaddir . basename($file['name']) ) ){
-            $files[] = '/upload/' . $uploaddir . $file['name'];
+            $files[] = '/congratulation/mail/upload/' . $uploaddir . $file['name'];
         }
         else{
             $error = true;
