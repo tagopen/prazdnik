@@ -83,7 +83,9 @@ $(function() {
                     // Success message
 
                     // remove prevent submit behaviour and disable preloading
-                    $("[type=submit]").prop("disabled", false).button('reset');  
+                    $("[type=submit]").prop("disabled", false).button('reset');
+
+                    document.location.href = '/success.html';
 
                     //clear all fields
                     $('.contactForm').trigger("reset");
