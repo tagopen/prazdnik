@@ -304,11 +304,11 @@ $(document).ready(function(){
     if ($childrean == '1') {
       $('#childrean-1').addClass('col-md-offset-3');
       $('#childrean-2').addClass('gender__item--hidden');
-      $('.download__heading').text('Загрузите фотографию ребёнка. Фотография ребёнка появится в Книге Деда Мороза');
+      $('.download__heading').html('Загрузите фотографию ребёнка. Фотография ребёнка появится в Книге Деда Мороза');
     } else {
       $('#childrean-1').removeClass('col-md-offset-3');
       $('#childrean-2').removeClass('gender__item--hidden');
-      $('.download__heading').text('Загрузите одну совместную фотографию двух детей. Фотография детей появится в Книге <br>Деда Мороза');
+      $('.download__heading').html('Загрузите одну совместную фотографию двух детей. Фотография детей появится в Книге <br>Деда Мороза');
     }
   });
   // select gender
