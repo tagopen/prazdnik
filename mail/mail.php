@@ -24,23 +24,62 @@
     );
 
   if (!empty($_POST["user_form"])) {
-    $post['user_form'] = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $post['user_form'] = filter_input(INPUT_POST, 'user_form', FILTER_SANITIZE_EMAIL);
   }
 
-  if (!empty($_POST["email"])) {
-    $post['user_email'] = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+  if (!empty($_POST["user_customerID"])) {
+    $post['user_customerID'] = filter_input(INPUT_POST, 'user_customerID', FILTER_SANITIZE_STRING);
   }
 
-  if (!empty($_POST["name"])) {
-    $post['user_name'] = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+  if (!empty($_POST["user_package"])) {
+    $post['user_package'] = filter_input(INPUT_POST, 'user_package', FILTER_SANITIZE_STRING);
   }
 
-  if (!empty($_POST["phone"])) {
-    $post['user_phone'] = filter_input(INPUT_POST,'phone', FILTER_SANITIZE_STRING);
+  if (!empty($_POST["user_filename"])) {
+    $post['user_filename'] = filter_input(INPUT_POST, 'user_filename', FILTER_SANITIZE_STRING);
   }
 
-  if (!empty($_POST["message"])) {
-    $post['user_message'] = filter_input(INPUT_POST, 'message', FILTER_SANITIZE_STRING);
+  if (!empty($_POST["user_childrean"])) {
+    $post['user_childrean'] = filter_input(INPUT_POST, 'user_childrean', FILTER_SANITIZE_STRING);
+  }
+
+  if (!empty($_POST["user_photo"])) {
+    $post['user_photo'] = filter_input(INPUT_POST, 'user_photo', FILTER_SANITIZE_STRING);
+  }
+
+  if (!empty($_POST["user_name"])) {
+    $post['user_name'] = filter_input(INPUT_POST, 'user_name', FILTER_SANITIZE_STRING);
+  }
+
+  if (!empty($_POST["user_email"])) {
+    $post['user_email'] = filter_input(INPUT_POST, 'user_email', FILTER_SANITIZE_EMAIL);
+  }
+
+  if (!empty($_POST["user_phone"])) {
+    $post['user_phone'] = filter_input(INPUT_POST,'user_phone', FILTER_SANITIZE_STRING);
+  }
+
+  if (!empty($_POST["child1_name"])) {
+    $post['child1_name'] = filter_input(INPUT_POST,'child1_name', FILTER_SANITIZE_STRING);
+  } else {
+    $post['child1_name'] = false;
+  }
+
+  if (!empty($_POST["child2_name"])) {
+    $post['child2_name'] = filter_input(INPUT_POST,'child2_name', FILTER_SANITIZE_STRING);
+  } else {
+    $post['child2_name'] = false;
+  }
+
+  if (!empty($_POST["user_promo"])) {
+    $post['user_promo'] = filter_input(INPUT_POST,'user_promo', FILTER_SANITIZE_STRING);
+  } else {
+    $post['user_promo'] = false;
+  }
+  if (!empty($_POST["user_fullcost"])) {
+    $post['user_fullcost'] = filter_input(INPUT_POST,'user_fullcost', FILTER_SANITIZE_STRING);
+  } else {
+    $post['user_fullcost'] = false;
   }
 
   // Insert form data into html
@@ -89,6 +128,8 @@
   $mail->AddAddress($to, 'Name Surname');
 
   $mail->isHTML(false);
+ 
+  $mail->AddAttachment(getcwd() . '/upload/uploads/'. $post['user_customerID']. '/'. $post['user_filename'], $post['user_filename']); // добавляем вложение
 
   $mail->Subject      = "Новая заявка с сайта";
   $mail->Body         = $body;

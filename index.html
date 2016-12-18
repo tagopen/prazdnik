@@ -63,11 +63,33 @@
   <![endif]-->
 </head>
 <body>
-  <div class="rope">
-    <i class="ic ic-rope"></i>
-    <i class="fa fa-long-arrow-down fa-3x faa-vertical animated rope__icon" aria-hidden="true"></i>
-  </div>
 
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container navbar__container">
+      <i class="ic ic-tree-left navbar__icon navbar__icon--left"></i>
+      <i class="ic ic-tree-right navbar__icon navbar__icon--right"></i>
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse text-center">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Пример</a></li>
+          <li><a href="#">Список имён</a></li>
+          <li><a class="page-scroll" href="#cost">Цены</a></li>
+          <li><a class="page-scroll" href="#faq">Вопросы</a></li>
+          <li><a class="navbar__btn video-btn" href="/congratulation/">Заказать</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div>
+  </nav>
 <div class="flip">
   <div class="flip__box">
     <div class="flip__front">
@@ -75,963 +97,968 @@
       <section class="order">
         <div class="container">
           <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-              <div class="order__box">
-                <div class="order__head">
-                  <h1 class="heading">Заказать видеопоздравление</h1>
-                  
-                  <ul class="order__list order__list--unstyle">
-                    <li class="order__step">
-                      <i class="order__line order__line--active order__line--hide"></i>
-                      <a href="#tab-1" class="order__item order__item--active"><span class="order__text">1</span></a>
-                      <span class="order__description order__description--active">Выбор пакета</span></li>
-                    <li class="order__step">
-                      <i class="order__line"></i>
-                      <a href="#tab-2" class="order__item"><span class="order__text">2</span></a>
-                      <span class="order__description">Сколько детей нужно поздравить?</span> 
-                    </li>
-                    <li class="order__step">
-                      <i class="order__line"></i>
-                      <a href="#tab-3" class="order__item"><span class="order__text">3</span></a>
-                      <span class="order__description">Имена детей</span>
-                    </li>
-                    <li class="order__step">
-                      <i class="order__line"></i>
-                      <a href="#tab-4" class="order__item"><span class="order__text">4</span></a>
-                      <span class="order__description">Загрузка фотографий</span>
-                    </li>
-                    <li class="order__step">
-                      <i class="order__line"></i>
-                      <a href="#tab-5" class="order__item"><span class="order__text">5</span></a>
-                      <span class="order__description">Контактные данные</span>
-                    </li>
-                  </ul><!-- /.order__list -->
-                </div><!-- /.order__head -->
-                <div class="order__body">
-                  <div class="clearfix tabs">
-                    <div class="row tabs__item tabs__item--active package" id="tab-1">
-                      <div class="col-md-4 package__item">
-                        <div class="package__photo"><img src="../img/icons/packet1.png" alt="" class="img-responsive package__img"></div>
-                        <div class="package__btn checkbox-btn">
-                          <input class="checkbox-btn__control" type="radio" name="package" id="package-1" data-toggle="cost" data-price="78" data-description="1" data-title="Пакет №:" checked>
-                          <label class="checkbox-btn__box" for="package-1">1 пакет</label>
+            <form class="contactForm" name="Заказ поздравлений" method="post" novalidate>
+              <div class="col-md-10 col-md-offset-1">
+                <div class="order__box">
+                  <div class="order__head">
+                    <h1 class="heading">Заказать видеопоздравление</h1>
+                    
+                    <ul class="order__list order__list--unstyle">
+                      <li class="order__step">
+                        <i class="order__line order__line--active order__line--hide"></i>
+                        <a href="#tab-1" class="order__item order__item--active"><span class="order__text">1</span></a>
+                        <span class="order__description order__description--active">Выбор пакета</span></li>
+                      <li class="order__step">
+                        <i class="order__line"></i>
+                        <a href="#tab-2" class="order__item"><span class="order__text">2</span></a>
+                        <span class="order__description">Сколько детей нужно поздравить?</span> 
+                      </li>
+                      <li class="order__step">
+                        <i class="order__line"></i>
+                        <a href="#tab-3" class="order__item"><span class="order__text">3</span></a>
+                        <span class="order__description">Имена детей</span>
+                      </li>
+                      <li class="order__step">
+                        <i class="order__line"></i>
+                        <a href="#tab-4" class="order__item"><span class="order__text">4</span></a>
+                        <span class="order__description">Загрузка фотографий</span>
+                      </li>
+                      <li class="order__step">
+                        <i class="order__line"></i>
+                        <a href="#tab-5" class="order__item"><span class="order__text">5</span></a>
+                        <span class="order__description">Контактные данные</span>
+                      </li>
+                    </ul><!-- /.order__list -->
+                  </div><!-- /.order__head -->
+                  <div class="order__body">
+                    <div class="clearfix tabs">
+                      <div class="row tabs__item tabs__item--active package" id="tab-1">
+                        <div class="col-md-4 package__item">
+                          <div class="package__photo"><img src="../img/icons/packet1.png" alt="" class="img-responsive package__img"></div>
+                          <div class="package__btn checkbox-btn">
+                            <input class="checkbox-btn__control" type="radio" name="package" id="package-1" data-toggle="cost" data-price="78" data-description="1" data-title="Пакет №:" checked>
+                            <label class="checkbox-btn__box" for="package-1">1 пакет</label>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-md-4 package__item">
-                        <div class="package__photo"><img src="../img/icons/packet2.png" alt="" class="img-responsive package__img"></div>
-                        <div class="package__btn checkbox-btn">
-                          <input class="checkbox-btn__control" type="radio" name="package" id="package-2" data-toggle="cost" data-price="135" data-description="2" data-title="Пакет №:">
-                          <label class="checkbox-btn__box" for="package-2">2 пакет</label>
+                        <div class="col-md-4 package__item">
+                          <div class="package__photo"><img src="../img/icons/packet2.png" alt="" class="img-responsive package__img"></div>
+                          <div class="package__btn checkbox-btn">
+                            <input class="checkbox-btn__control" type="radio" name="package" id="package-2" data-toggle="cost" data-price="135" data-description="2" data-title="Пакет №:">
+                            <label class="checkbox-btn__box" for="package-2">2 пакет</label>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-md-4 package__item">
-                        <div class="package__photo"><img src="../img/icons/packet3.png" alt="" class="img-responsive package__img"></div>
-                        <div class="package__btn checkbox-btn">
-                          <input class="checkbox-btn__control" type="radio" name="package" id="package-3" data-toggle="cost" data-price="168" data-description="3" data-title="Пакет №:">
-                          <label class="checkbox-btn__box" for="package-3">3 пакет</label>
+                        <div class="col-md-4 package__item">
+                          <div class="package__photo"><img src="../img/icons/packet3.png" alt="" class="img-responsive package__img"></div>
+                          <div class="package__btn checkbox-btn">
+                            <input class="checkbox-btn__control" type="radio" name="package" id="package-3" data-toggle="cost" data-price="168" data-description="3" data-title="Пакет №:">
+                            <label class="checkbox-btn__box" for="package-3">3 пакет</label>
+                          </div>
                         </div>
-                      </div>
-                    </div><!-- /.tabs__item -->
-                    <div class="tabs__item" id="tab-2">
-                      <div class="row child">
-                        <div class="col-sm-6 child__item">
-                          <div class="child__icon">
-                            <img src="img/one.png" alt="Мальчик" class="img-responsive child__img"/>
-                          </div>
-                          <div class="child__btn checkbox-btn">
-                            <input class="checkbox-btn__control" type="radio" name="radiobtn" id="rbtn1" checked>
-                            <label class="checkbox-btn__box" for="rbtn1" data-childrean="1">1 ребенок</label>
-                          </div>
-                        </div><!-- /.child__item -->
-
-                        <div class="col-sm-6 child__item">
-                          <div class="child__icon">
-                            <img src="img/two.png" alt="Девочка" class="img-responsive child__img">
-                          </div>
-                          <div class="child__btn checkbox-btn">
-                            <input class="checkbox-btn__control" type="radio" name="radiobtn" id="rbtn2" data-toggle="cost" data-price="40" data-description="2 ребёнка" data-title="Количество детей:">
-                            <label class="checkbox-btn__box" for="rbtn2" data-childrean="2">2 ребенка</label>
-                          </div>
-                        </div><!-- /.child__item -->
-                      </div><!-- /.child -->
-                    </div><!-- /.tabs__item -->
-                    <div class="tabs__item" id="tab-3">
-                      <div class="row gender">
-                        <div id="childrean-1" class="col-md-6 col-md-offset-3 gender__item">
-                          <div class="row gender__group child-gender">
-                            <div class="col-sm-6 child-gender__item radio-btn">
-                              <input class="radio-btn__control" type="radio" name="gender" id="rbtn11" checked>
-                              <label class="radio-btn__box" for="rbtn11" data-gender=".gender__select--male"><span class="radio-btn__icon"></span>Мальчик</label>
+                      </div><!-- /.tabs__item -->
+                      <div class="tabs__item" id="tab-2">
+                        <div class="row child">
+                          <div class="col-sm-6 child__item">
+                            <div class="child__icon">
+                              <img src="img/one.png" alt="Мальчик" class="img-responsive child__img"/>
                             </div>
-                            <div class="col-sm-6 child-gender__item radio-btn">
-                              <input class="radio-btn__control" type="radio" name="gender" id="rbtn12">
-                              <label class="radio-btn__box" for="rbtn12" data-gender=".gender__select--female"><span class="radio-btn__icon"></span>Девочка</label>
+                            <div class="child__btn checkbox-btn">
+                              <input class="checkbox-btn__control" type="radio" name="radiobtn" id="rbtn1" checked>
+                              <label class="checkbox-btn__box" for="rbtn1" data-childrean="1">1 ребенок</label>
                             </div>
-                          </div><!-- /.gender__group -->
+                          </div><!-- /.child__item -->
 
-                          <div class="gender__group">
-                            <select class="gender__select gender__select--male gender__select--active">
-                              <option value="" disabled selected style="display: none;">Выберите имя из списка</option>
-                              <option value="1">Абрам</option>
-                              <option value="2">Авраам</option>
-                              <option value="3">Адам</option>
-                              <option value="4">Аким</option>
-                              <option value="5">Алан</option>
-                              <option value="6">Александр</option>
-                              <option value="7">Алексей</option>
-                              <option value="8">Альберт</option>
-                              <option value="9">Альфред</option>
-                              <option value="10">Анатолий</option>
-                              <option value="11">Андрей</option>
-                              <option value="12">Антон</option>
-                              <option value="13">Антуан</option>
-                              <option value="14">Аполлон</option>
-                              <option value="15">Аристарх</option>
-                              <option value="16">Аркадий</option>
-                              <option value="17">Арсен</option>
-                              <option value="18">Артем</option>
-                              <option value="19">Артур</option>
-                              <option value="20">Архип</option>
-                              <option value="21">Афанасий</option>
-                              <option value="22">Бенедикт</option>
-                              <option value="23">Богдан</option>
-                              <option value="24">Борис</option>
-                              <option value="25">Бронислав</option>
-                              <option value="26">Вадим</option>
-                              <option value="27">Валентин</option>
-                              <option value="28">Валерий</option>
-                              <option value="29">Василий</option>
-                              <option value="30">Венедикт</option>
-                              <option value="31">Вениамин</option>
-                              <option value="32">Виктор</option>
-                              <option value="33">Вилен</option>
-                              <option value="34">Виталий</option>
-                              <option value="35">Влад</option>
-                              <option value="36">Владимир</option>
-                              <option value="37">Владислав</option>
-                              <option value="38">Владлен</option>
-                              <option value="39">Влас</option>
-                              <option value="40">Вольдемар</option>
-                              <option value="41">Всеволод</option>
-                              <option value="42">Вячеслав</option>
-                              <option value="43">Гавриил</option>
-                              <option value="44">Гарри</option>
-                              <option value="45">Геннадий</option>
-                              <option value="46">Георгий</option>
-                              <option value="47">Герасим</option>
-                              <option value="48">Герман</option>
-                              <option value="49">Глеб</option>
-                              <option value="50">Гордей</option>
-                              <option value="51">Григорий</option>
-                              <option value="52">Давид</option>
-                              <option value="53"></option>
-                              <option value="54">Даниил</option>
-                              <option value="55">Демид</option>
-                              <option value="56">Демьян</option>
-                              <option value="57">Денис</option>
-                              <option value="58">Джозеф</option>
-                              <option value="59">Джон</option>
-                              <option value="60">Дмитрий</option>
-                              <option value="61">Евгений</option>
-                              <option value="62">Евдоким</option>
-                              <option value="63">Егор</option>
-                              <option value="64">Елисей</option>
-                              <option value="65">Емельян</option>
-                              <option value="66">Ефим</option>
-                              <option value="67">Ефрем</option>
-                              <option value="68">Захар</option>
-                              <option value="69">Ибрагим</option>
-                              <option value="70">Иван</option>
-                              <option value="71">Игнат</option>
-                              <option value="72">Игнатий</option>
-                              <option value="73">Игорь</option>
-                              <option value="74">Илларион</option>
-                              <option value="75">Илья</option>
-                              <option value="76">Иннокентий</option>
-                              <option value="77">Иосиф</option>
-                              <option value="78">Ираклий</option>
-                              <option value="79">Исаак</option>
-                              <option value="80">Казимир</option>
-                              <option value="81">Камиль</option>
-                              <option value="82">Карим</option>
-                              <option value="83">Карл</option>
-                              <option value="84">Касьян</option>
-                              <option value="85">Ким</option>
-                              <option value="86">Кир</option>
-                              <option value="87">Кирилл</option>
-                              <option value="88">Клим</option>
-                              <option value="89">Климентий</option>
-                              <option value="90">Константин</option>
-                              <option value="91">Кузьма</option>
-                              <option value="92">Лаврентий</option>
-                              <option value="93">Лев</option>
-                              <option value="94">Леонард</option>
-                              <option value="95">Леонид</option>
-                              <option value="96">Леонтий</option>
-                              <option value="97">Лука</option>
-                              <option value="98">Лукьян</option>
-                              <option value="99">Любомир</option>
-                              <option value="100">Людвиг</option>
-                              <option value="101">Макар</option>
-                              <option value="102">Максим</option>
-                              <option value="103">Максимилиан</option>
-                              <option value="104">Максимильян</option>
-                              <option value="105">Малик</option>
-                              <option value="106">Марат</option>
-                              <option value="107">Марк</option>
-                              <option value="108">Марсель</option>
-                              <option value="109">Мартин</option>
-                              <option value="110">Матвей</option>
-                              <option value="111">Милан</option>
-                              <option value="112">Милослав</option>
-                              <option value="113">Мирон</option>
-                              <option value="114">Мирослав</option>
-                              <option value="115">Михаил</option>
-                              <option value="116">Моисей</option>
-                              <option value="117">Мстислав</option>
-                              <option value="118">Назар</option>
-                              <option value="119">Назарий</option>
-                              <option value="120">Натан</option>
-                              <option value="121">Наум</option>
-                              <option value="122">Нестор</option>
-                              <option value="123">Никита</option>
-                              <option value="124">Никифор</option>
-                              <option value="125">Николай</option>
-                              <option value="126">Олесь</option>
-                              <option value="127">Орест</option>
-                              <option value="128">Осип</option>
-                              <option value="129">Оскар</option>
-                              <option value="130">Олег</option>
-                              <option value="131">Остап</option>
-                              <option value="132">Павел</option>
-                              <option value="133">Пантелеймон</option>
-                              <option value="134">Петр</option>
-                              <option value="135">Платон</option>
-                              <option value="136">Прохор</option>
-                              <option value="137">Радик</option>
-                              <option value="138">Радим</option>
-                              <option value="139">Радислав</option>
-                              <option value="140">Радомир</option>
-                              <option value="141">Рамиль</option>
-                              <option value="142">Ратмир</option>
-                              <option value="143">Рафаэль</option>
-                              <option value="144">Ринат</option>
-                              <option value="145">Роберт</option>
-                              <option value="146">Родион</option>
-                              <option value="147">Роман</option>
-                              <option value="148">Ростислав</option>
-                              <option value="149">Рубен</option>
-                              <option value="150">Рудольф</option>
-                              <option value="151">Руслан</option>
-                              <option value="152">Рустам</option>
-                              <option value="153">Савва</option>
-                              <option value="154">Савелий</option>
-                              <option value="155">Святополк</option>
-                              <option value="156">Святослав</option>
-                              <option value="157">Севастьян</option>
-                              <option value="158">Семен</option>
-                              <option value="159">Серафим</option>
-                              <option value="160">Сергей</option>
-                              <option value="161">Соломон</option>
-                              <option value="162">Станислав</option>
-                              <option value="163">Степан</option>
-                              <option value="164">Тамерлан</option>
-                              <option value="165">Тарас</option>
-                              <option value="166">Тимофей</option>
-                              <option value="167">Тимур</option>
-                              <option value="168">Тихан</option>
-                              <option value="169">Трофим</option>
-                              <option value="170">Фадей</option>
-                              <option value="171">Федор</option>
-                              <option value="172">Феликс</option>
-                              <option value="173">Филипп</option>
-                              <option value="174">Харитон</option>
-                              <option value="175">Шамиль</option>
-                              <option value="176">Эдуард</option>
-                              <option value="177">Эльдар</option>
-                              <option value="178">Эмиль</option>
-                              <option value="179">Эрик</option>
-                              <option value="180">Эрнест</option>
-                              <option value="181">Юлиан</option>
-                              <option value="182">Юлий</option>
-                              <option value="183">Юрий</option>
-                              <option value="184">Яков</option>
-                              <option value="185">Ян</option>
-                              <option value="186">Ярослав</option>
-                            </select>
-                            <select class="gender__select gender__select--female">
-                              <option value="" disabled selected style="display: none;">Выберите имя из списка</option>
-                              <option value="1">Аврора</option>
-                              <option value="2">Агата</option>
-                              <option value="3">Агнесса</option>
-                              <option value="4">Агния</option>
-                              <option value="5">Ада</option>
-                              <option value="6">Аделина</option>
-                              <option value="7">Адель</option>
-                              <option value="8">Аза</option>
-                              <option value="9">Алевтина</option>
-                              <option value="10">Алена</option>
-                              <option value="11">Алина</option>
-                              <option value="12">Алиса</option>
-                              <option value="13">Алла</option>
-                              <option value="14">Алсу</option>
-                              <option value="15">Альбина</option>
-                              <option value="16">Анастасия</option>
-                              <option value="17">Ангелина</option>
-                              <option value="18">Анжела</option>
-                              <option value="19">Анжелика</option>
-                              <option value="20">Анисия</option>
-                              <option value="21">Анита</option>
-                              <option value="22">Анна</option>
-                              <option value="23">Антонина</option>
-                              <option value="24">Анфиса</option>
-                              <option value="25">Арина</option>
-                              <option value="26">Астра</option>
-                              <option value="27">Белла</option>
-                              <option value="28">Берта</option>
-                              <option value="29">Богдана</option>
-                              <option value="30">Борислава</option>
-                              <option value="31">Бронислава</option>
-                              <option value="32">Валентина</option>
-                              <option value="33">Валерия</option>
-                              <option value="34">Варвара</option>
-                              <option value="35">Василина</option>
-                              <option value="36">Василиса</option>
-                              <option value="37">Вера</option>
-                              <option value="38">Вероника</option>
-                              <option value="39">Виктория</option>
-                              <option value="40">Вилена</option>
-                              <option value="41">Виола</option>
-                              <option value="42">Виолетта</option>
-                              <option value="43">Виталина</option>
-                              <option value="44">Влада</option>
-                              <option value="45">Владислава</option>
-                              <option value="46">Галина</option>
-                              <option value="47">Ганна</option>
-                              <option value="48">Глория</option>
-                              <option value="49">Гульнара</option>
-                              <option value="50">Дана</option>
-                              <option value="51">Дарина</option>
-                              <option value="52">Дарья</option>
-                              <option value="53">Дарьяна</option>
-                              <option value="54">Декабрина</option>
-                              <option value="55">Джульетта</option>
-                              <option value="56">Диана</option>
-                              <option value="57">Дина</option>
-                              <option value="58">Динара</option>
-                              <option value="59">Ева</option>
-                              <option value="60">Евгения</option>
-                              <option value="61">Евдокия</option>
-                              <option value="62">Екатерина</option>
-                              <option value="63">Елена</option>
-                              <option value="64">Елизавета</option>
-                              <option value="65">Жанна</option>
-                              <option value="66">Зарина</option>
-                              <option value="67">Зинаида</option>
-                              <option value="68">Злата</option>
-                              <option value="69">Зоя</option>
-                              <option value="70">Иванна</option>
-                              <option value="71">Ида</option>
-                              <option value="72">Илона</option>
-                              <option value="73">Инга</option>
-                              <option value="74">Инесса</option>
-                              <option value="75">Инна</option>
-                              <option value="76">Ирина</option>
-                              <option value="77">Камила</option>
-                              <option value="78">Камилла</option>
-                              <option value="79">Карина</option>
-                              <option value="80">Каролина</option>
-                              <option value="81">Катерина</option>
-                              <option value="82">Кира</option>
-                              <option value="83">Клавдия</option>
-                              <option value="84">Клара</option>
-                              <option value="85">Клеопатра</option>
-                              <option value="86">Констанция</option>
-                              <option value="87">Кристина</option>
-                              <option value="88">Ксения</option>
-                              <option value="89">Лада</option>
-                              <option value="90">Лариса</option>
-                              <option value="91">Лейла</option>
-                              <option value="92">Леонида</option>
-                              <option value="93">Леся</option>
-                              <option value="94">Лиана</option>
-                              <option value="95">Лидия</option>
-                              <option value="96">Лилия</option>
-                              <option value="97">Лия</option>
-                              <option value="98">Лолита</option>
-                              <option value="99">Любовь</option>
-                              <option value="100">Людмила</option>
-                              <option value="101">Магда</option>
-                              <option value="102">Магдалина</option>
-                              <option value="103">Мадина</option>
-                              <option value="104">Майя</option>
-                              <option value="105">Мальвина</option>
-                              <option value="106">Маргарита</option>
-                              <option value="107">Мари</option>
-                              <option value="108">Марианна</option>
-                              <option value="109">Марина</option>
-                              <option value="110">Мария</option>
-                              <option value="111">Марта</option>
-                              <option value="112">Марфа</option>
-                              <option value="113">Марьяна</option>
-                              <option value="114">Медина</option>
-                              <option value="115">Мелания</option>
-                              <option value="116">Мила</option>
-                              <option value="117">Милана</option>
-                              <option value="118">Милена</option>
-                              <option value="119">Мирра</option>
-                              <option value="120">Надежда</option>
-                              <option value="121">Настасья</option>
-                              <option value="122">Наталия</option>
-                              <option value="123">Наталья</option>
-                              <option value="124">Неля</option>
-                              <option value="125">Ника</option>
-                              <option value="126">Нина</option>
-                              <option value="127">Нинель</option>
-                              <option value="128">Нонна</option>
-                              <option value="129">Нора</option>
-                              <option value="130">Оксана</option>
-                              <option value="131">Олеся</option>
-                              <option value="132">Ольга</option>
-                              <option value="133">Павлина</option>
-                              <option value="134">Полина</option>
-                              <option value="135">Рада</option>
-                              <option value="136">Раиса</option>
-                              <option value="137">Регина</option>
-                              <option value="138">Рената</option>
-                              <option value="139">Римма</option>
-                              <option value="140">Роза</option>
-                              <option value="141">Розалия</option>
-                              <option value="142">Розана</option>
-                              <option value="143">Роксана</option>
-                              <option value="144">Рузана</option>
-                              <option value="145">Руслана</option>
-                              <option value="146">Сабина</option>
-                              <option value="147">Саломея</option>
-                              <option value="148">Сарра</option>
-                              <option value="149">Светлана</option>
-                              <option value="150">Светослава</option>
-                              <option value="151">Селена</option>
-                              <option value="152">Серафима</option>
-                              <option value="153">Слава</option>
-                              <option value="154">Снежана</option>
-                              <option value="155">София</option>
-                              <option value="156">Станислава</option>
-                              <option value="157">Стася</option>
-                              <option value="158">Стелла</option>
-                              <option value="159">Стефания</option>
-                              <option value="160">Сюзанна</option>
-                              <option value="161">Таисия</option>
-                              <option value="162">Тамара</option>
-                              <option value="163">Тамила</option>
-                              <option value="164">Татьяна</option>
-                              <option value="165">Ульяна</option>
-                              <option value="166">Фаина</option>
-                              <option value="167">Фелиция</option>
-                              <option value="168">Флора</option>
-                              <option value="169">Христина</option>
-                              <option value="170">Эвелина</option>
-                              <option value="171">Элеонора</option>
-                              <option value="172">Элина</option>
-                              <option value="173">Эльвира</option>
-                              <option value="174">Эльза</option>
-                              <option value="175">Эльмира</option>
-                              <option value="176">Эмилия</option>
-                              <option value="177">Эмма</option>
-                              <option value="178">Эрика</option>
-                              <option value="179">Юлиана</option>
-                              <option value="180">Юлия</option>
-                              <option value="181">Юнона</option>
-                              <option value="182">Яна</option>
-                              <option value="183">Янина</option>
-                              <option value="184">Ярослава</option>                
-                            </select>
-                          </div><!-- /.gender__group -->
+                          <div class="col-sm-6 child__item">
+                            <div class="child__icon">
+                              <img src="img/two.png" alt="Девочка" class="img-responsive child__img">
+                            </div>
+                            <div class="child__btn checkbox-btn">
+                              <input class="checkbox-btn__control" type="radio" name="radiobtn" id="rbtn2" data-toggle="cost" data-price="40" data-description="2 ребёнка" data-title="Количество детей:">
+                              <label class="checkbox-btn__box" for="rbtn2" data-childrean="2">2 ребенка</label>
+                            </div>
+                          </div><!-- /.child__item -->
+                        </div><!-- /.child -->
+                      </div><!-- /.tabs__item -->
+                      <div class="tabs__item" id="tab-3">
+                        <div class="row gender">
+                          <div id="childrean-1" class="col-md-6 col-md-offset-3 gender__item">
+                            <div class="row gender__group child-gender">
+                              <div class="col-sm-6 child-gender__item radio-btn">
+                                <input class="radio-btn__control" type="radio" name="gender" id="rbtn11" checked>
+                                <label class="radio-btn__box" for="rbtn11" data-gender=".gender__select--male"><span class="radio-btn__icon"></span>Мальчик</label>
+                              </div>
+                              <div class="col-sm-6 child-gender__item radio-btn">
+                                <input class="radio-btn__control" type="radio" name="gender" id="rbtn12">
+                                <label class="radio-btn__box" for="rbtn12" data-gender=".gender__select--female"><span class="radio-btn__icon"></span>Девочка</label>
+                              </div>
+                            </div><!-- /.gender__group -->
 
-                          <div class="gender__group">
-                            <input aria-invalid="false" class="gender__input" placeholder="Введите имя" required data-validation-required-message="Пожалуйста, заполните это поле" name="name2" type="text">
-                          </div><!-- /.gender__group -->
+                            <div class="gender__group">
+                              <select class="gender__select gender__select--male gender__select--active">
+                                <option value="" disabled selected style="display: none;">Выберите имя из списка</option>
+                                <option value="1">Абрам</option>
+                                <option value="2">Авраам</option>
+                                <option value="3">Адам</option>
+                                <option value="4">Аким</option>
+                                <option value="5">Алан</option>
+                                <option value="6">Александр</option>
+                                <option value="7">Алексей</option>
+                                <option value="8">Альберт</option>
+                                <option value="9">Альфред</option>
+                                <option value="10">Анатолий</option>
+                                <option value="11">Андрей</option>
+                                <option value="12">Антон</option>
+                                <option value="13">Антуан</option>
+                                <option value="14">Аполлон</option>
+                                <option value="15">Аристарх</option>
+                                <option value="16">Аркадий</option>
+                                <option value="17">Арсен</option>
+                                <option value="18">Артем</option>
+                                <option value="19">Артур</option>
+                                <option value="20">Архип</option>
+                                <option value="21">Афанасий</option>
+                                <option value="22">Бенедикт</option>
+                                <option value="23">Богдан</option>
+                                <option value="24">Борис</option>
+                                <option value="25">Бронислав</option>
+                                <option value="26">Вадим</option>
+                                <option value="27">Валентин</option>
+                                <option value="28">Валерий</option>
+                                <option value="29">Василий</option>
+                                <option value="30">Венедикт</option>
+                                <option value="31">Вениамин</option>
+                                <option value="32">Виктор</option>
+                                <option value="33">Вилен</option>
+                                <option value="34">Виталий</option>
+                                <option value="35">Влад</option>
+                                <option value="36">Владимир</option>
+                                <option value="37">Владислав</option>
+                                <option value="38">Владлен</option>
+                                <option value="39">Влас</option>
+                                <option value="40">Вольдемар</option>
+                                <option value="41">Всеволод</option>
+                                <option value="42">Вячеслав</option>
+                                <option value="43">Гавриил</option>
+                                <option value="44">Гарри</option>
+                                <option value="45">Геннадий</option>
+                                <option value="46">Георгий</option>
+                                <option value="47">Герасим</option>
+                                <option value="48">Герман</option>
+                                <option value="49">Глеб</option>
+                                <option value="50">Гордей</option>
+                                <option value="51">Григорий</option>
+                                <option value="52">Давид</option>
+                                <option value="53"></option>
+                                <option value="54">Даниил</option>
+                                <option value="55">Демид</option>
+                                <option value="56">Демьян</option>
+                                <option value="57">Денис</option>
+                                <option value="58">Джозеф</option>
+                                <option value="59">Джон</option>
+                                <option value="60">Дмитрий</option>
+                                <option value="61">Евгений</option>
+                                <option value="62">Евдоким</option>
+                                <option value="63">Егор</option>
+                                <option value="64">Елисей</option>
+                                <option value="65">Емельян</option>
+                                <option value="66">Ефим</option>
+                                <option value="67">Ефрем</option>
+                                <option value="68">Захар</option>
+                                <option value="69">Ибрагим</option>
+                                <option value="70">Иван</option>
+                                <option value="71">Игнат</option>
+                                <option value="72">Игнатий</option>
+                                <option value="73">Игорь</option>
+                                <option value="74">Илларион</option>
+                                <option value="75">Илья</option>
+                                <option value="76">Иннокентий</option>
+                                <option value="77">Иосиф</option>
+                                <option value="78">Ираклий</option>
+                                <option value="79">Исаак</option>
+                                <option value="80">Казимир</option>
+                                <option value="81">Камиль</option>
+                                <option value="82">Карим</option>
+                                <option value="83">Карл</option>
+                                <option value="84">Касьян</option>
+                                <option value="85">Ким</option>
+                                <option value="86">Кир</option>
+                                <option value="87">Кирилл</option>
+                                <option value="88">Клим</option>
+                                <option value="89">Климентий</option>
+                                <option value="90">Константин</option>
+                                <option value="91">Кузьма</option>
+                                <option value="92">Лаврентий</option>
+                                <option value="93">Лев</option>
+                                <option value="94">Леонард</option>
+                                <option value="95">Леонид</option>
+                                <option value="96">Леонтий</option>
+                                <option value="97">Лука</option>
+                                <option value="98">Лукьян</option>
+                                <option value="99">Любомир</option>
+                                <option value="100">Людвиг</option>
+                                <option value="101">Макар</option>
+                                <option value="102">Максим</option>
+                                <option value="103">Максимилиан</option>
+                                <option value="104">Максимильян</option>
+                                <option value="105">Малик</option>
+                                <option value="106">Марат</option>
+                                <option value="107">Марк</option>
+                                <option value="108">Марсель</option>
+                                <option value="109">Мартин</option>
+                                <option value="110">Матвей</option>
+                                <option value="111">Милан</option>
+                                <option value="112">Милослав</option>
+                                <option value="113">Мирон</option>
+                                <option value="114">Мирослав</option>
+                                <option value="115">Михаил</option>
+                                <option value="116">Моисей</option>
+                                <option value="117">Мстислав</option>
+                                <option value="118">Назар</option>
+                                <option value="119">Назарий</option>
+                                <option value="120">Натан</option>
+                                <option value="121">Наум</option>
+                                <option value="122">Нестор</option>
+                                <option value="123">Никита</option>
+                                <option value="124">Никифор</option>
+                                <option value="125">Николай</option>
+                                <option value="126">Олесь</option>
+                                <option value="127">Орест</option>
+                                <option value="128">Осип</option>
+                                <option value="129">Оскар</option>
+                                <option value="130">Олег</option>
+                                <option value="131">Остап</option>
+                                <option value="132">Павел</option>
+                                <option value="133">Пантелеймон</option>
+                                <option value="134">Петр</option>
+                                <option value="135">Платон</option>
+                                <option value="136">Прохор</option>
+                                <option value="137">Радик</option>
+                                <option value="138">Радим</option>
+                                <option value="139">Радислав</option>
+                                <option value="140">Радомир</option>
+                                <option value="141">Рамиль</option>
+                                <option value="142">Ратмир</option>
+                                <option value="143">Рафаэль</option>
+                                <option value="144">Ринат</option>
+                                <option value="145">Роберт</option>
+                                <option value="146">Родион</option>
+                                <option value="147">Роман</option>
+                                <option value="148">Ростислав</option>
+                                <option value="149">Рубен</option>
+                                <option value="150">Рудольф</option>
+                                <option value="151">Руслан</option>
+                                <option value="152">Рустам</option>
+                                <option value="153">Савва</option>
+                                <option value="154">Савелий</option>
+                                <option value="155">Святополк</option>
+                                <option value="156">Святослав</option>
+                                <option value="157">Севастьян</option>
+                                <option value="158">Семен</option>
+                                <option value="159">Серафим</option>
+                                <option value="160">Сергей</option>
+                                <option value="161">Соломон</option>
+                                <option value="162">Станислав</option>
+                                <option value="163">Степан</option>
+                                <option value="164">Тамерлан</option>
+                                <option value="165">Тарас</option>
+                                <option value="166">Тимофей</option>
+                                <option value="167">Тимур</option>
+                                <option value="168">Тихан</option>
+                                <option value="169">Трофим</option>
+                                <option value="170">Фадей</option>
+                                <option value="171">Федор</option>
+                                <option value="172">Феликс</option>
+                                <option value="173">Филипп</option>
+                                <option value="174">Харитон</option>
+                                <option value="175">Шамиль</option>
+                                <option value="176">Эдуард</option>
+                                <option value="177">Эльдар</option>
+                                <option value="178">Эмиль</option>
+                                <option value="179">Эрик</option>
+                                <option value="180">Эрнест</option>
+                                <option value="181">Юлиан</option>
+                                <option value="182">Юлий</option>
+                                <option value="183">Юрий</option>
+                                <option value="184">Яков</option>
+                                <option value="185">Ян</option>
+                                <option value="186">Ярослав</option>
+                              </select>
+                              <select class="gender__select gender__select--female">
+                                <option value="" disabled selected style="display: none;">Выберите имя из списка</option>
+                                <option value="1">Аврора</option>
+                                <option value="2">Агата</option>
+                                <option value="3">Агнесса</option>
+                                <option value="4">Агния</option>
+                                <option value="5">Ада</option>
+                                <option value="6">Аделина</option>
+                                <option value="7">Адель</option>
+                                <option value="8">Аза</option>
+                                <option value="9">Алевтина</option>
+                                <option value="10">Алена</option>
+                                <option value="11">Алина</option>
+                                <option value="12">Алиса</option>
+                                <option value="13">Алла</option>
+                                <option value="14">Алсу</option>
+                                <option value="15">Альбина</option>
+                                <option value="16">Анастасия</option>
+                                <option value="17">Ангелина</option>
+                                <option value="18">Анжела</option>
+                                <option value="19">Анжелика</option>
+                                <option value="20">Анисия</option>
+                                <option value="21">Анита</option>
+                                <option value="22">Анна</option>
+                                <option value="23">Антонина</option>
+                                <option value="24">Анфиса</option>
+                                <option value="25">Арина</option>
+                                <option value="26">Астра</option>
+                                <option value="27">Белла</option>
+                                <option value="28">Берта</option>
+                                <option value="29">Богдана</option>
+                                <option value="30">Борислава</option>
+                                <option value="31">Бронислава</option>
+                                <option value="32">Валентина</option>
+                                <option value="33">Валерия</option>
+                                <option value="34">Варвара</option>
+                                <option value="35">Василина</option>
+                                <option value="36">Василиса</option>
+                                <option value="37">Вера</option>
+                                <option value="38">Вероника</option>
+                                <option value="39">Виктория</option>
+                                <option value="40">Вилена</option>
+                                <option value="41">Виола</option>
+                                <option value="42">Виолетта</option>
+                                <option value="43">Виталина</option>
+                                <option value="44">Влада</option>
+                                <option value="45">Владислава</option>
+                                <option value="46">Галина</option>
+                                <option value="47">Ганна</option>
+                                <option value="48">Глория</option>
+                                <option value="49">Гульнара</option>
+                                <option value="50">Дана</option>
+                                <option value="51">Дарина</option>
+                                <option value="52">Дарья</option>
+                                <option value="53">Дарьяна</option>
+                                <option value="54">Декабрина</option>
+                                <option value="55">Джульетта</option>
+                                <option value="56">Диана</option>
+                                <option value="57">Дина</option>
+                                <option value="58">Динара</option>
+                                <option value="59">Ева</option>
+                                <option value="60">Евгения</option>
+                                <option value="61">Евдокия</option>
+                                <option value="62">Екатерина</option>
+                                <option value="63">Елена</option>
+                                <option value="64">Елизавета</option>
+                                <option value="65">Жанна</option>
+                                <option value="66">Зарина</option>
+                                <option value="67">Зинаида</option>
+                                <option value="68">Злата</option>
+                                <option value="69">Зоя</option>
+                                <option value="70">Иванна</option>
+                                <option value="71">Ида</option>
+                                <option value="72">Илона</option>
+                                <option value="73">Инга</option>
+                                <option value="74">Инесса</option>
+                                <option value="75">Инна</option>
+                                <option value="76">Ирина</option>
+                                <option value="77">Камила</option>
+                                <option value="78">Камилла</option>
+                                <option value="79">Карина</option>
+                                <option value="80">Каролина</option>
+                                <option value="81">Катерина</option>
+                                <option value="82">Кира</option>
+                                <option value="83">Клавдия</option>
+                                <option value="84">Клара</option>
+                                <option value="85">Клеопатра</option>
+                                <option value="86">Констанция</option>
+                                <option value="87">Кристина</option>
+                                <option value="88">Ксения</option>
+                                <option value="89">Лада</option>
+                                <option value="90">Лариса</option>
+                                <option value="91">Лейла</option>
+                                <option value="92">Леонида</option>
+                                <option value="93">Леся</option>
+                                <option value="94">Лиана</option>
+                                <option value="95">Лидия</option>
+                                <option value="96">Лилия</option>
+                                <option value="97">Лия</option>
+                                <option value="98">Лолита</option>
+                                <option value="99">Любовь</option>
+                                <option value="100">Людмила</option>
+                                <option value="101">Магда</option>
+                                <option value="102">Магдалина</option>
+                                <option value="103">Мадина</option>
+                                <option value="104">Майя</option>
+                                <option value="105">Мальвина</option>
+                                <option value="106">Маргарита</option>
+                                <option value="107">Мари</option>
+                                <option value="108">Марианна</option>
+                                <option value="109">Марина</option>
+                                <option value="110">Мария</option>
+                                <option value="111">Марта</option>
+                                <option value="112">Марфа</option>
+                                <option value="113">Марьяна</option>
+                                <option value="114">Медина</option>
+                                <option value="115">Мелания</option>
+                                <option value="116">Мила</option>
+                                <option value="117">Милана</option>
+                                <option value="118">Милена</option>
+                                <option value="119">Мирра</option>
+                                <option value="120">Надежда</option>
+                                <option value="121">Настасья</option>
+                                <option value="122">Наталия</option>
+                                <option value="123">Наталья</option>
+                                <option value="124">Неля</option>
+                                <option value="125">Ника</option>
+                                <option value="126">Нина</option>
+                                <option value="127">Нинель</option>
+                                <option value="128">Нонна</option>
+                                <option value="129">Нора</option>
+                                <option value="130">Оксана</option>
+                                <option value="131">Олеся</option>
+                                <option value="132">Ольга</option>
+                                <option value="133">Павлина</option>
+                                <option value="134">Полина</option>
+                                <option value="135">Рада</option>
+                                <option value="136">Раиса</option>
+                                <option value="137">Регина</option>
+                                <option value="138">Рената</option>
+                                <option value="139">Римма</option>
+                                <option value="140">Роза</option>
+                                <option value="141">Розалия</option>
+                                <option value="142">Розана</option>
+                                <option value="143">Роксана</option>
+                                <option value="144">Рузана</option>
+                                <option value="145">Руслана</option>
+                                <option value="146">Сабина</option>
+                                <option value="147">Саломея</option>
+                                <option value="148">Сарра</option>
+                                <option value="149">Светлана</option>
+                                <option value="150">Светослава</option>
+                                <option value="151">Селена</option>
+                                <option value="152">Серафима</option>
+                                <option value="153">Слава</option>
+                                <option value="154">Снежана</option>
+                                <option value="155">София</option>
+                                <option value="156">Станислава</option>
+                                <option value="157">Стася</option>
+                                <option value="158">Стелла</option>
+                                <option value="159">Стефания</option>
+                                <option value="160">Сюзанна</option>
+                                <option value="161">Таисия</option>
+                                <option value="162">Тамара</option>
+                                <option value="163">Тамила</option>
+                                <option value="164">Татьяна</option>
+                                <option value="165">Ульяна</option>
+                                <option value="166">Фаина</option>
+                                <option value="167">Фелиция</option>
+                                <option value="168">Флора</option>
+                                <option value="169">Христина</option>
+                                <option value="170">Эвелина</option>
+                                <option value="171">Элеонора</option>
+                                <option value="172">Элина</option>
+                                <option value="173">Эльвира</option>
+                                <option value="174">Эльза</option>
+                                <option value="175">Эльмира</option>
+                                <option value="176">Эмилия</option>
+                                <option value="177">Эмма</option>
+                                <option value="178">Эрика</option>
+                                <option value="179">Юлиана</option>
+                                <option value="180">Юлия</option>
+                                <option value="181">Юнона</option>
+                                <option value="182">Яна</option>
+                                <option value="183">Янина</option>
+                                <option value="184">Ярослава</option>                
+                              </select>
+                            </div><!-- /.gender__group -->
 
-                          <div class="gender__group">
+                            <div class="gender__group">
+                              <input aria-invalid="false" class="gender__input" placeholder="Введите имя" name="name2" type="text">
+                            </div><!-- /.gender__group -->
+
+                            <div class="gender__group">
+                              <div class="gender__addname radio-btn">
+                                <input class="radio-btn__control" type="checkbox" name="child-1" id="addChild-1" data-toggle="cost" data-price="25" data-description="1 ребёнок" data-title="Дозапись имени:">
+                                <label class="radio-btn__box radio-btn__box--check" name="child-1" for="addChild-1"><span class="radio-btn__icon radio-btn__icon--check"></span>Добавить имя</label>
+                              </div>
+
+                              <div class="gender__notify notify">Если Вы не нашли нужное имя, то впишите его в данном поле и мы в течении 2-х дней дозапишем его. Стоимость записи имени (имен) 25 грн.</div>
+                            </div><!-- /.gender__group -->
+                          </div><!-- /.gender__item -->
+                          <div id="childrean-2" class="col-md-6 gender__item gender__item--hidden">
+                            <div class="row gender__group child-gender">
+                              <div class="col-sm-6 child-gender__item radio-btn">
+                                <input class="radio-btn__control" type="radio" name="childrean" id="rbtn13" checked>
+                                <label class="radio-btn__box" for="rbtn13" data-gender=".gender__select--male"><span class="radio-btn__icon"></span>Мальчик</label>
+                              </div>
+                              <div class="col-sm-6 child-gender__item radio-btn">
+                                <input class="radio-btn__control" type="radio" name="childrean" id="rbtn14">
+                                <label class="radio-btn__box" for="rbtn14" data-gender=".gender__select--female"><span class="radio-btn__icon"></span>Девочка</label>
+                              </div>
+                            </div><!-- /.gender__group -->
+
+                            <div class="gender__group">
+                              <select class="gender__select gender__select--male gender__select--active">
+                                <option value="" disabled selected style="display: none;">Выберите имя из списка</option>
+                                <option value="1">Абрам</option>
+                                <option value="2">Авраам</option>
+                                <option value="3">Адам</option>
+                                <option value="4">Аким</option>
+                                <option value="5">Алан</option>
+                                <option value="6">Александр</option>
+                                <option value="7">Алексей</option>
+                                <option value="8">Альберт</option>
+                                <option value="9">Альфред</option>
+                                <option value="10">Анатолий</option>
+                                <option value="11">Андрей</option>
+                                <option value="12">Антон</option>
+                                <option value="13">Антуан</option>
+                                <option value="14">Аполлон</option>
+                                <option value="15">Аристарх</option>
+                                <option value="16">Аркадий</option>
+                                <option value="17">Арсен</option>
+                                <option value="18">Артем</option>
+                                <option value="19">Артур</option>
+                                <option value="20">Архип</option>
+                                <option value="21">Афанасий</option>
+                                <option value="22">Бенедикт</option>
+                                <option value="23">Богдан</option>
+                                <option value="24">Борис</option>
+                                <option value="25">Бронислав</option>
+                                <option value="26">Вадим</option>
+                                <option value="27">Валентин</option>
+                                <option value="28">Валерий</option>
+                                <option value="29">Василий</option>
+                                <option value="30">Венедикт</option>
+                                <option value="31">Вениамин</option>
+                                <option value="32">Виктор</option>
+                                <option value="33">Вилен</option>
+                                <option value="34">Виталий</option>
+                                <option value="35">Влад</option>
+                                <option value="36">Владимир</option>
+                                <option value="37">Владислав</option>
+                                <option value="38">Владлен</option>
+                                <option value="39">Влас</option>
+                                <option value="40">Вольдемар</option>
+                                <option value="41">Всеволод</option>
+                                <option value="42">Вячеслав</option>
+                                <option value="43">Гавриил</option>
+                                <option value="44">Гарри</option>
+                                <option value="45">Геннадий</option>
+                                <option value="46">Георгий</option>
+                                <option value="47">Герасим</option>
+                                <option value="48">Герман</option>
+                                <option value="49">Глеб</option>
+                                <option value="50">Гордей</option>
+                                <option value="51">Григорий</option>
+                                <option value="52">Давид</option>
+                                <option value="53"></option>
+                                <option value="54">Даниил</option>
+                                <option value="55">Демид</option>
+                                <option value="56">Демьян</option>
+                                <option value="57">Денис</option>
+                                <option value="58">Джозеф</option>
+                                <option value="59">Джон</option>
+                                <option value="60">Дмитрий</option>
+                                <option value="61">Евгений</option>
+                                <option value="62">Евдоким</option>
+                                <option value="63">Егор</option>
+                                <option value="64">Елисей</option>
+                                <option value="65">Емельян</option>
+                                <option value="66">Ефим</option>
+                                <option value="67">Ефрем</option>
+                                <option value="68">Захар</option>
+                                <option value="69">Ибрагим</option>
+                                <option value="70">Иван</option>
+                                <option value="71">Игнат</option>
+                                <option value="72">Игнатий</option>
+                                <option value="73">Игорь</option>
+                                <option value="74">Илларион</option>
+                                <option value="75">Илья</option>
+                                <option value="76">Иннокентий</option>
+                                <option value="77">Иосиф</option>
+                                <option value="78">Ираклий</option>
+                                <option value="79">Исаак</option>
+                                <option value="80">Казимир</option>
+                                <option value="81">Камиль</option>
+                                <option value="82">Карим</option>
+                                <option value="83">Карл</option>
+                                <option value="84">Касьян</option>
+                                <option value="85">Ким</option>
+                                <option value="86">Кир</option>
+                                <option value="87">Кирилл</option>
+                                <option value="88">Клим</option>
+                                <option value="89">Климентий</option>
+                                <option value="90">Константин</option>
+                                <option value="91">Кузьма</option>
+                                <option value="92">Лаврентий</option>
+                                <option value="93">Лев</option>
+                                <option value="94">Леонард</option>
+                                <option value="95">Леонид</option>
+                                <option value="96">Леонтий</option>
+                                <option value="97">Лука</option>
+                                <option value="98">Лукьян</option>
+                                <option value="99">Любомир</option>
+                                <option value="100">Людвиг</option>
+                                <option value="101">Макар</option>
+                                <option value="102">Максим</option>
+                                <option value="103">Максимилиан</option>
+                                <option value="104">Максимильян</option>
+                                <option value="105">Малик</option>
+                                <option value="106">Марат</option>
+                                <option value="107">Марк</option>
+                                <option value="108">Марсель</option>
+                                <option value="109">Мартин</option>
+                                <option value="110">Матвей</option>
+                                <option value="111">Милан</option>
+                                <option value="112">Милослав</option>
+                                <option value="113">Мирон</option>
+                                <option value="114">Мирослав</option>
+                                <option value="115">Михаил</option>
+                                <option value="116">Моисей</option>
+                                <option value="117">Мстислав</option>
+                                <option value="118">Назар</option>
+                                <option value="119">Назарий</option>
+                                <option value="120">Натан</option>
+                                <option value="121">Наум</option>
+                                <option value="122">Нестор</option>
+                                <option value="123">Никита</option>
+                                <option value="124">Никифор</option>
+                                <option value="125">Николай</option>
+                                <option value="126">Олесь</option>
+                                <option value="127">Орест</option>
+                                <option value="128">Осип</option>
+                                <option value="129">Оскар</option>
+                                <option value="130">Олег</option>
+                                <option value="131">Остап</option>
+                                <option value="132">Павел</option>
+                                <option value="133">Пантелеймон</option>
+                                <option value="134">Петр</option>
+                                <option value="135">Платон</option>
+                                <option value="136">Прохор</option>
+                                <option value="137">Радик</option>
+                                <option value="138">Радим</option>
+                                <option value="139">Радислав</option>
+                                <option value="140">Радомир</option>
+                                <option value="141">Рамиль</option>
+                                <option value="142">Ратмир</option>
+                                <option value="143">Рафаэль</option>
+                                <option value="144">Ринат</option>
+                                <option value="145">Роберт</option>
+                                <option value="146">Родион</option>
+                                <option value="147">Роман</option>
+                                <option value="148">Ростислав</option>
+                                <option value="149">Рубен</option>
+                                <option value="150">Рудольф</option>
+                                <option value="151">Руслан</option>
+                                <option value="152">Рустам</option>
+                                <option value="153">Савва</option>
+                                <option value="154">Савелий</option>
+                                <option value="155">Святополк</option>
+                                <option value="156">Святослав</option>
+                                <option value="157">Севастьян</option>
+                                <option value="158">Семен</option>
+                                <option value="159">Серафим</option>
+                                <option value="160">Сергей</option>
+                                <option value="161">Соломон</option>
+                                <option value="162">Станислав</option>
+                                <option value="163">Степан</option>
+                                <option value="164">Тамерлан</option>
+                                <option value="165">Тарас</option>
+                                <option value="166">Тимофей</option>
+                                <option value="167">Тимур</option>
+                                <option value="168">Тихан</option>
+                                <option value="169">Трофим</option>
+                                <option value="170">Фадей</option>
+                                <option value="171">Федор</option>
+                                <option value="172">Феликс</option>
+                                <option value="173">Филипп</option>
+                                <option value="174">Харитон</option>
+                                <option value="175">Шамиль</option>
+                                <option value="176">Эдуард</option>
+                                <option value="177">Эльдар</option>
+                                <option value="178">Эмиль</option>
+                                <option value="179">Эрик</option>
+                                <option value="180">Эрнест</option>
+                                <option value="181">Юлиан</option>
+                                <option value="182">Юлий</option>
+                                <option value="183">Юрий</option>
+                                <option value="184">Яков</option>
+                                <option value="185">Ян</option>
+                                <option value="186">Ярослав</option>
+                              </select>
+                              <select class="gender__select gender__select--female">
+                                <option value="" disabled selected style="display: none;">Выберите имя из списка</option>
+                                <option value="1">Аврора</option>
+                                <option value="2">Агата</option>
+                                <option value="3">Агнесса</option>
+                                <option value="4">Агния</option>
+                                <option value="5">Ада</option>
+                                <option value="6">Аделина</option>
+                                <option value="7">Адель</option>
+                                <option value="8">Аза</option>
+                                <option value="9">Алевтина</option>
+                                <option value="10">Алена</option>
+                                <option value="11">Алина</option>
+                                <option value="12">Алиса</option>
+                                <option value="13">Алла</option>
+                                <option value="14">Алсу</option>
+                                <option value="15">Альбина</option>
+                                <option value="16">Анастасия</option>
+                                <option value="17">Ангелина</option>
+                                <option value="18">Анжела</option>
+                                <option value="19">Анжелика</option>
+                                <option value="20">Анисия</option>
+                                <option value="21">Анита</option>
+                                <option value="22">Анна</option>
+                                <option value="23">Антонина</option>
+                                <option value="24">Анфиса</option>
+                                <option value="25">Арина</option>
+                                <option value="26">Астра</option>
+                                <option value="27">Белла</option>
+                                <option value="28">Берта</option>
+                                <option value="29">Богдана</option>
+                                <option value="30">Борислава</option>
+                                <option value="31">Бронислава</option>
+                                <option value="32">Валентина</option>
+                                <option value="33">Валерия</option>
+                                <option value="34">Варвара</option>
+                                <option value="35">Василина</option>
+                                <option value="36">Василиса</option>
+                                <option value="37">Вера</option>
+                                <option value="38">Вероника</option>
+                                <option value="39">Виктория</option>
+                                <option value="40">Вилена</option>
+                                <option value="41">Виола</option>
+                                <option value="42">Виолетта</option>
+                                <option value="43">Виталина</option>
+                                <option value="44">Влада</option>
+                                <option value="45">Владислава</option>
+                                <option value="46">Галина</option>
+                                <option value="47">Ганна</option>
+                                <option value="48">Глория</option>
+                                <option value="49">Гульнара</option>
+                                <option value="50">Дана</option>
+                                <option value="51">Дарина</option>
+                                <option value="52">Дарья</option>
+                                <option value="53">Дарьяна</option>
+                                <option value="54">Декабрина</option>
+                                <option value="55">Джульетта</option>
+                                <option value="56">Диана</option>
+                                <option value="57">Дина</option>
+                                <option value="58">Динара</option>
+                                <option value="59">Ева</option>
+                                <option value="60">Евгения</option>
+                                <option value="61">Евдокия</option>
+                                <option value="62">Екатерина</option>
+                                <option value="63">Елена</option>
+                                <option value="64">Елизавета</option>
+                                <option value="65">Жанна</option>
+                                <option value="66">Зарина</option>
+                                <option value="67">Зинаида</option>
+                                <option value="68">Злата</option>
+                                <option value="69">Зоя</option>
+                                <option value="70">Иванна</option>
+                                <option value="71">Ида</option>
+                                <option value="72">Илона</option>
+                                <option value="73">Инга</option>
+                                <option value="74">Инесса</option>
+                                <option value="75">Инна</option>
+                                <option value="76">Ирина</option>
+                                <option value="77">Камила</option>
+                                <option value="78">Камилла</option>
+                                <option value="79">Карина</option>
+                                <option value="80">Каролина</option>
+                                <option value="81">Катерина</option>
+                                <option value="82">Кира</option>
+                                <option value="83">Клавдия</option>
+                                <option value="84">Клара</option>
+                                <option value="85">Клеопатра</option>
+                                <option value="86">Констанция</option>
+                                <option value="87">Кристина</option>
+                                <option value="88">Ксения</option>
+                                <option value="89">Лада</option>
+                                <option value="90">Лариса</option>
+                                <option value="91">Лейла</option>
+                                <option value="92">Леонида</option>
+                                <option value="93">Леся</option>
+                                <option value="94">Лиана</option>
+                                <option value="95">Лидия</option>
+                                <option value="96">Лилия</option>
+                                <option value="97">Лия</option>
+                                <option value="98">Лолита</option>
+                                <option value="99">Любовь</option>
+                                <option value="100">Людмила</option>
+                                <option value="101">Магда</option>
+                                <option value="102">Магдалина</option>
+                                <option value="103">Мадина</option>
+                                <option value="104">Майя</option>
+                                <option value="105">Мальвина</option>
+                                <option value="106">Маргарита</option>
+                                <option value="107">Мари</option>
+                                <option value="108">Марианна</option>
+                                <option value="109">Марина</option>
+                                <option value="110">Мария</option>
+                                <option value="111">Марта</option>
+                                <option value="112">Марфа</option>
+                                <option value="113">Марьяна</option>
+                                <option value="114">Медина</option>
+                                <option value="115">Мелания</option>
+                                <option value="116">Мила</option>
+                                <option value="117">Милана</option>
+                                <option value="118">Милена</option>
+                                <option value="119">Мирра</option>
+                                <option value="120">Надежда</option>
+                                <option value="121">Настасья</option>
+                                <option value="122">Наталия</option>
+                                <option value="123">Наталья</option>
+                                <option value="124">Неля</option>
+                                <option value="125">Ника</option>
+                                <option value="126">Нина</option>
+                                <option value="127">Нинель</option>
+                                <option value="128">Нонна</option>
+                                <option value="129">Нора</option>
+                                <option value="130">Оксана</option>
+                                <option value="131">Олеся</option>
+                                <option value="132">Ольга</option>
+                                <option value="133">Павлина</option>
+                                <option value="134">Полина</option>
+                                <option value="135">Рада</option>
+                                <option value="136">Раиса</option>
+                                <option value="137">Регина</option>
+                                <option value="138">Рената</option>
+                                <option value="139">Римма</option>
+                                <option value="140">Роза</option>
+                                <option value="141">Розалия</option>
+                                <option value="142">Розана</option>
+                                <option value="143">Роксана</option>
+                                <option value="144">Рузана</option>
+                                <option value="145">Руслана</option>
+                                <option value="146">Сабина</option>
+                                <option value="147">Саломея</option>
+                                <option value="148">Сарра</option>
+                                <option value="149">Светлана</option>
+                                <option value="150">Светослава</option>
+                                <option value="151">Селена</option>
+                                <option value="152">Серафима</option>
+                                <option value="153">Слава</option>
+                                <option value="154">Снежана</option>
+                                <option value="155">София</option>
+                                <option value="156">Станислава</option>
+                                <option value="157">Стася</option>
+                                <option value="158">Стелла</option>
+                                <option value="159">Стефания</option>
+                                <option value="160">Сюзанна</option>
+                                <option value="161">Таисия</option>
+                                <option value="162">Тамара</option>
+                                <option value="163">Тамила</option>
+                                <option value="164">Татьяна</option>
+                                <option value="165">Ульяна</option>
+                                <option value="166">Фаина</option>
+                                <option value="167">Фелиция</option>
+                                <option value="168">Флора</option>
+                                <option value="169">Христина</option>
+                                <option value="170">Эвелина</option>
+                                <option value="171">Элеонора</option>
+                                <option value="172">Элина</option>
+                                <option value="173">Эльвира</option>
+                                <option value="174">Эльза</option>
+                                <option value="175">Эльмира</option>
+                                <option value="176">Эмилия</option>
+                                <option value="177">Эмма</option>
+                                <option value="178">Эрика</option>
+                                <option value="179">Юлиана</option>
+                                <option value="180">Юлия</option>
+                                <option value="181">Юнона</option>
+                                <option value="182">Яна</option>
+                                <option value="183">Янина</option>
+                                <option value="184">Ярослава</option>                
+                              </select>
+                            </div><!-- /.gender__group -->
+
+                            <div class="gender__group">
+                              <input aria-invalid="false" class="gender__input" placeholder="Введите имя" name="name" type="text">
+                            </div><!-- /.gender__group -->
+
+                            <div class="gender__group">
+                              <div class="gender__addname radio-btn">
+                                <input class="radio-btn__control" type="checkbox" name="child-2" id="addChild-2" data-toggle="cost" data-price="25" data-description="1 ребенок" data-title="Дозапись имени:">
+                                <label class="radio-btn__box radio-btn__box--check" for="addChild-2"><span class="radio-btn__icon radio-btn__icon--check"></span>Добавить имя</label>
+                              </div>
+                              <div class="gender__notify notify">Если Вы не нашли нужное имя, то впишите его в данном поле и мы в течении 2-х дней дозапишем его. Стоимость записи имени (имен) 25 грн.</div>
+                            </div><!-- /.gender__group -->
+                          </div><!-- /.gender__item -->
+                        </div><!-- /.gender -->
+                      </div><!-- /.tabs__item -->
+                      <div class="tabs__item" id="tab-4">
+                        <div class="row download">
+                          <div class="col-md-12 text-center download__heading">Загрузите фотографию ребёнка. Фотография ребёнка появится в Книге <br>Деда Мороза</div>
+
+                          <form id="form-1" class="col-md-5 col-md-offset-1 text-center download__form" enctype="multipart" method="post">
+                            <label for="original-photo" class="download__btn">
+                              <input id="original-photo" class="download__file" type="file" name="photo">
+                              Загрузить фотографию
+                            </label>
+                          </form> 
+                          <div class="col-md-6">
+                            <p class="download__warning warning">Поддерживаемые форматы фотографии: jpg, bmp, png</p>
+                          </div>
+
+                          <div class="col-md-4 col-md-offset-4 download__preview"></div>
+                          <div class="col-md-4 col-md-offset-4">
                             <div class="download__select radio-btn">
-                              <input class="radio-btn__control" type="checkbox" name="child-1" id="addChild-1" data-toggle="cost" data-price="25" data-description="1 ребёнок" data-title="Дозапись имени:">
-                              <label class="radio-btn__box radio-btn__box--check" for="addChild-1"><span class="radio-btn__icon radio-btn__icon--check"></span>Добавить имя</label>
+                              <input class="radio-btn__control" type="radio" name="download" id="download-true" data-toggle="cost" data-price="15" data-description="1 фотография" data-title="Просмотр фотографии:" checked>
+                              <label class="radio-btn__box radio-btn__box--check" for="download-true"><span class="radio-btn__icon radio-btn__icon--check"></span>Добавить фото</label>
                             </div>
-
-                            <div class="gender__notify notify">Если Вы не нашли нужное имя, то впишите его в данном поле и мы в течении 2-х дней дозапишем его. Стоимость записи имени (имен) 25 грн.</div>
-                          </div><!-- /.gender__group -->
-                        </div><!-- /.gender__item -->
-                        <div id="childrean-2" class="col-md-6 gender__item gender__item--hidden">
-                          <div class="row gender__group child-gender">
-                            <div class="col-sm-6 child-gender__item radio-btn">
-                              <input class="radio-btn__control" type="radio" name="childrean" id="rbtn13" checked>
-                              <label class="radio-btn__box" for="rbtn13" data-gender=".gender__select--male"><span class="radio-btn__icon"></span>Мальчик</label>
-                            </div>
-                            <div class="col-sm-6 child-gender__item radio-btn">
-                              <input class="radio-btn__control" type="radio" name="childrean" id="rbtn14">
-                              <label class="radio-btn__box" for="rbtn14" data-gender=".gender__select--female"><span class="radio-btn__icon"></span>Девочка</label>
-                            </div>
-                          </div><!-- /.gender__group -->
-
-                          <div class="gender__group">
-                            <select class="gender__select gender__select--male gender__select--active">
-                              <option value="" disabled selected style="display: none;">Выберите имя из списка</option>
-                              <option value="1">Абрам</option>
-                              <option value="2">Авраам</option>
-                              <option value="3">Адам</option>
-                              <option value="4">Аким</option>
-                              <option value="5">Алан</option>
-                              <option value="6">Александр</option>
-                              <option value="7">Алексей</option>
-                              <option value="8">Альберт</option>
-                              <option value="9">Альфред</option>
-                              <option value="10">Анатолий</option>
-                              <option value="11">Андрей</option>
-                              <option value="12">Антон</option>
-                              <option value="13">Антуан</option>
-                              <option value="14">Аполлон</option>
-                              <option value="15">Аристарх</option>
-                              <option value="16">Аркадий</option>
-                              <option value="17">Арсен</option>
-                              <option value="18">Артем</option>
-                              <option value="19">Артур</option>
-                              <option value="20">Архип</option>
-                              <option value="21">Афанасий</option>
-                              <option value="22">Бенедикт</option>
-                              <option value="23">Богдан</option>
-                              <option value="24">Борис</option>
-                              <option value="25">Бронислав</option>
-                              <option value="26">Вадим</option>
-                              <option value="27">Валентин</option>
-                              <option value="28">Валерий</option>
-                              <option value="29">Василий</option>
-                              <option value="30">Венедикт</option>
-                              <option value="31">Вениамин</option>
-                              <option value="32">Виктор</option>
-                              <option value="33">Вилен</option>
-                              <option value="34">Виталий</option>
-                              <option value="35">Влад</option>
-                              <option value="36">Владимир</option>
-                              <option value="37">Владислав</option>
-                              <option value="38">Владлен</option>
-                              <option value="39">Влас</option>
-                              <option value="40">Вольдемар</option>
-                              <option value="41">Всеволод</option>
-                              <option value="42">Вячеслав</option>
-                              <option value="43">Гавриил</option>
-                              <option value="44">Гарри</option>
-                              <option value="45">Геннадий</option>
-                              <option value="46">Георгий</option>
-                              <option value="47">Герасим</option>
-                              <option value="48">Герман</option>
-                              <option value="49">Глеб</option>
-                              <option value="50">Гордей</option>
-                              <option value="51">Григорий</option>
-                              <option value="52">Давид</option>
-                              <option value="53"></option>
-                              <option value="54">Даниил</option>
-                              <option value="55">Демид</option>
-                              <option value="56">Демьян</option>
-                              <option value="57">Денис</option>
-                              <option value="58">Джозеф</option>
-                              <option value="59">Джон</option>
-                              <option value="60">Дмитрий</option>
-                              <option value="61">Евгений</option>
-                              <option value="62">Евдоким</option>
-                              <option value="63">Егор</option>
-                              <option value="64">Елисей</option>
-                              <option value="65">Емельян</option>
-                              <option value="66">Ефим</option>
-                              <option value="67">Ефрем</option>
-                              <option value="68">Захар</option>
-                              <option value="69">Ибрагим</option>
-                              <option value="70">Иван</option>
-                              <option value="71">Игнат</option>
-                              <option value="72">Игнатий</option>
-                              <option value="73">Игорь</option>
-                              <option value="74">Илларион</option>
-                              <option value="75">Илья</option>
-                              <option value="76">Иннокентий</option>
-                              <option value="77">Иосиф</option>
-                              <option value="78">Ираклий</option>
-                              <option value="79">Исаак</option>
-                              <option value="80">Казимир</option>
-                              <option value="81">Камиль</option>
-                              <option value="82">Карим</option>
-                              <option value="83">Карл</option>
-                              <option value="84">Касьян</option>
-                              <option value="85">Ким</option>
-                              <option value="86">Кир</option>
-                              <option value="87">Кирилл</option>
-                              <option value="88">Клим</option>
-                              <option value="89">Климентий</option>
-                              <option value="90">Константин</option>
-                              <option value="91">Кузьма</option>
-                              <option value="92">Лаврентий</option>
-                              <option value="93">Лев</option>
-                              <option value="94">Леонард</option>
-                              <option value="95">Леонид</option>
-                              <option value="96">Леонтий</option>
-                              <option value="97">Лука</option>
-                              <option value="98">Лукьян</option>
-                              <option value="99">Любомир</option>
-                              <option value="100">Людвиг</option>
-                              <option value="101">Макар</option>
-                              <option value="102">Максим</option>
-                              <option value="103">Максимилиан</option>
-                              <option value="104">Максимильян</option>
-                              <option value="105">Малик</option>
-                              <option value="106">Марат</option>
-                              <option value="107">Марк</option>
-                              <option value="108">Марсель</option>
-                              <option value="109">Мартин</option>
-                              <option value="110">Матвей</option>
-                              <option value="111">Милан</option>
-                              <option value="112">Милослав</option>
-                              <option value="113">Мирон</option>
-                              <option value="114">Мирослав</option>
-                              <option value="115">Михаил</option>
-                              <option value="116">Моисей</option>
-                              <option value="117">Мстислав</option>
-                              <option value="118">Назар</option>
-                              <option value="119">Назарий</option>
-                              <option value="120">Натан</option>
-                              <option value="121">Наум</option>
-                              <option value="122">Нестор</option>
-                              <option value="123">Никита</option>
-                              <option value="124">Никифор</option>
-                              <option value="125">Николай</option>
-                              <option value="126">Олесь</option>
-                              <option value="127">Орест</option>
-                              <option value="128">Осип</option>
-                              <option value="129">Оскар</option>
-                              <option value="130">Олег</option>
-                              <option value="131">Остап</option>
-                              <option value="132">Павел</option>
-                              <option value="133">Пантелеймон</option>
-                              <option value="134">Петр</option>
-                              <option value="135">Платон</option>
-                              <option value="136">Прохор</option>
-                              <option value="137">Радик</option>
-                              <option value="138">Радим</option>
-                              <option value="139">Радислав</option>
-                              <option value="140">Радомир</option>
-                              <option value="141">Рамиль</option>
-                              <option value="142">Ратмир</option>
-                              <option value="143">Рафаэль</option>
-                              <option value="144">Ринат</option>
-                              <option value="145">Роберт</option>
-                              <option value="146">Родион</option>
-                              <option value="147">Роман</option>
-                              <option value="148">Ростислав</option>
-                              <option value="149">Рубен</option>
-                              <option value="150">Рудольф</option>
-                              <option value="151">Руслан</option>
-                              <option value="152">Рустам</option>
-                              <option value="153">Савва</option>
-                              <option value="154">Савелий</option>
-                              <option value="155">Святополк</option>
-                              <option value="156">Святослав</option>
-                              <option value="157">Севастьян</option>
-                              <option value="158">Семен</option>
-                              <option value="159">Серафим</option>
-                              <option value="160">Сергей</option>
-                              <option value="161">Соломон</option>
-                              <option value="162">Станислав</option>
-                              <option value="163">Степан</option>
-                              <option value="164">Тамерлан</option>
-                              <option value="165">Тарас</option>
-                              <option value="166">Тимофей</option>
-                              <option value="167">Тимур</option>
-                              <option value="168">Тихан</option>
-                              <option value="169">Трофим</option>
-                              <option value="170">Фадей</option>
-                              <option value="171">Федор</option>
-                              <option value="172">Феликс</option>
-                              <option value="173">Филипп</option>
-                              <option value="174">Харитон</option>
-                              <option value="175">Шамиль</option>
-                              <option value="176">Эдуард</option>
-                              <option value="177">Эльдар</option>
-                              <option value="178">Эмиль</option>
-                              <option value="179">Эрик</option>
-                              <option value="180">Эрнест</option>
-                              <option value="181">Юлиан</option>
-                              <option value="182">Юлий</option>
-                              <option value="183">Юрий</option>
-                              <option value="184">Яков</option>
-                              <option value="185">Ян</option>
-                              <option value="186">Ярослав</option>
-                            </select>
-                            <select class="gender__select gender__select--female">
-                              <option value="" disabled selected style="display: none;">Выберите имя из списка</option>
-                              <option value="1">Аврора</option>
-                              <option value="2">Агата</option>
-                              <option value="3">Агнесса</option>
-                              <option value="4">Агния</option>
-                              <option value="5">Ада</option>
-                              <option value="6">Аделина</option>
-                              <option value="7">Адель</option>
-                              <option value="8">Аза</option>
-                              <option value="9">Алевтина</option>
-                              <option value="10">Алена</option>
-                              <option value="11">Алина</option>
-                              <option value="12">Алиса</option>
-                              <option value="13">Алла</option>
-                              <option value="14">Алсу</option>
-                              <option value="15">Альбина</option>
-                              <option value="16">Анастасия</option>
-                              <option value="17">Ангелина</option>
-                              <option value="18">Анжела</option>
-                              <option value="19">Анжелика</option>
-                              <option value="20">Анисия</option>
-                              <option value="21">Анита</option>
-                              <option value="22">Анна</option>
-                              <option value="23">Антонина</option>
-                              <option value="24">Анфиса</option>
-                              <option value="25">Арина</option>
-                              <option value="26">Астра</option>
-                              <option value="27">Белла</option>
-                              <option value="28">Берта</option>
-                              <option value="29">Богдана</option>
-                              <option value="30">Борислава</option>
-                              <option value="31">Бронислава</option>
-                              <option value="32">Валентина</option>
-                              <option value="33">Валерия</option>
-                              <option value="34">Варвара</option>
-                              <option value="35">Василина</option>
-                              <option value="36">Василиса</option>
-                              <option value="37">Вера</option>
-                              <option value="38">Вероника</option>
-                              <option value="39">Виктория</option>
-                              <option value="40">Вилена</option>
-                              <option value="41">Виола</option>
-                              <option value="42">Виолетта</option>
-                              <option value="43">Виталина</option>
-                              <option value="44">Влада</option>
-                              <option value="45">Владислава</option>
-                              <option value="46">Галина</option>
-                              <option value="47">Ганна</option>
-                              <option value="48">Глория</option>
-                              <option value="49">Гульнара</option>
-                              <option value="50">Дана</option>
-                              <option value="51">Дарина</option>
-                              <option value="52">Дарья</option>
-                              <option value="53">Дарьяна</option>
-                              <option value="54">Декабрина</option>
-                              <option value="55">Джульетта</option>
-                              <option value="56">Диана</option>
-                              <option value="57">Дина</option>
-                              <option value="58">Динара</option>
-                              <option value="59">Ева</option>
-                              <option value="60">Евгения</option>
-                              <option value="61">Евдокия</option>
-                              <option value="62">Екатерина</option>
-                              <option value="63">Елена</option>
-                              <option value="64">Елизавета</option>
-                              <option value="65">Жанна</option>
-                              <option value="66">Зарина</option>
-                              <option value="67">Зинаида</option>
-                              <option value="68">Злата</option>
-                              <option value="69">Зоя</option>
-                              <option value="70">Иванна</option>
-                              <option value="71">Ида</option>
-                              <option value="72">Илона</option>
-                              <option value="73">Инга</option>
-                              <option value="74">Инесса</option>
-                              <option value="75">Инна</option>
-                              <option value="76">Ирина</option>
-                              <option value="77">Камила</option>
-                              <option value="78">Камилла</option>
-                              <option value="79">Карина</option>
-                              <option value="80">Каролина</option>
-                              <option value="81">Катерина</option>
-                              <option value="82">Кира</option>
-                              <option value="83">Клавдия</option>
-                              <option value="84">Клара</option>
-                              <option value="85">Клеопатра</option>
-                              <option value="86">Констанция</option>
-                              <option value="87">Кристина</option>
-                              <option value="88">Ксения</option>
-                              <option value="89">Лада</option>
-                              <option value="90">Лариса</option>
-                              <option value="91">Лейла</option>
-                              <option value="92">Леонида</option>
-                              <option value="93">Леся</option>
-                              <option value="94">Лиана</option>
-                              <option value="95">Лидия</option>
-                              <option value="96">Лилия</option>
-                              <option value="97">Лия</option>
-                              <option value="98">Лолита</option>
-                              <option value="99">Любовь</option>
-                              <option value="100">Людмила</option>
-                              <option value="101">Магда</option>
-                              <option value="102">Магдалина</option>
-                              <option value="103">Мадина</option>
-                              <option value="104">Майя</option>
-                              <option value="105">Мальвина</option>
-                              <option value="106">Маргарита</option>
-                              <option value="107">Мари</option>
-                              <option value="108">Марианна</option>
-                              <option value="109">Марина</option>
-                              <option value="110">Мария</option>
-                              <option value="111">Марта</option>
-                              <option value="112">Марфа</option>
-                              <option value="113">Марьяна</option>
-                              <option value="114">Медина</option>
-                              <option value="115">Мелания</option>
-                              <option value="116">Мила</option>
-                              <option value="117">Милана</option>
-                              <option value="118">Милена</option>
-                              <option value="119">Мирра</option>
-                              <option value="120">Надежда</option>
-                              <option value="121">Настасья</option>
-                              <option value="122">Наталия</option>
-                              <option value="123">Наталья</option>
-                              <option value="124">Неля</option>
-                              <option value="125">Ника</option>
-                              <option value="126">Нина</option>
-                              <option value="127">Нинель</option>
-                              <option value="128">Нонна</option>
-                              <option value="129">Нора</option>
-                              <option value="130">Оксана</option>
-                              <option value="131">Олеся</option>
-                              <option value="132">Ольга</option>
-                              <option value="133">Павлина</option>
-                              <option value="134">Полина</option>
-                              <option value="135">Рада</option>
-                              <option value="136">Раиса</option>
-                              <option value="137">Регина</option>
-                              <option value="138">Рената</option>
-                              <option value="139">Римма</option>
-                              <option value="140">Роза</option>
-                              <option value="141">Розалия</option>
-                              <option value="142">Розана</option>
-                              <option value="143">Роксана</option>
-                              <option value="144">Рузана</option>
-                              <option value="145">Руслана</option>
-                              <option value="146">Сабина</option>
-                              <option value="147">Саломея</option>
-                              <option value="148">Сарра</option>
-                              <option value="149">Светлана</option>
-                              <option value="150">Светослава</option>
-                              <option value="151">Селена</option>
-                              <option value="152">Серафима</option>
-                              <option value="153">Слава</option>
-                              <option value="154">Снежана</option>
-                              <option value="155">София</option>
-                              <option value="156">Станислава</option>
-                              <option value="157">Стася</option>
-                              <option value="158">Стелла</option>
-                              <option value="159">Стефания</option>
-                              <option value="160">Сюзанна</option>
-                              <option value="161">Таисия</option>
-                              <option value="162">Тамара</option>
-                              <option value="163">Тамила</option>
-                              <option value="164">Татьяна</option>
-                              <option value="165">Ульяна</option>
-                              <option value="166">Фаина</option>
-                              <option value="167">Фелиция</option>
-                              <option value="168">Флора</option>
-                              <option value="169">Христина</option>
-                              <option value="170">Эвелина</option>
-                              <option value="171">Элеонора</option>
-                              <option value="172">Элина</option>
-                              <option value="173">Эльвира</option>
-                              <option value="174">Эльза</option>
-                              <option value="175">Эльмира</option>
-                              <option value="176">Эмилия</option>
-                              <option value="177">Эмма</option>
-                              <option value="178">Эрика</option>
-                              <option value="179">Юлиана</option>
-                              <option value="180">Юлия</option>
-                              <option value="181">Юнона</option>
-                              <option value="182">Яна</option>
-                              <option value="183">Янина</option>
-                              <option value="184">Ярослава</option>                
-                            </select>
-                          </div><!-- /.gender__group -->
-
-                          <div class="gender__group">
-                            <input aria-invalid="false" class="gender__input" placeholder="Введите имя" required data-validation-required-message="Пожалуйста, заполните это поле" name="name" type="text">
-                          </div><!-- /.gender__group -->
-
-                          <div class="gender__group">
                             <div class="download__select radio-btn">
-                              <input class="radio-btn__control" type="checkbox" name="child-2" id="addChild-2" data-toggle="cost" data-price="25" data-description="1 ребенок" data-title="Дозапись имени:">
-                              <label class="radio-btn__box radio-btn__box--check" for="addChild-2"><span class="radio-btn__icon radio-btn__icon--check"></span>Добавить имя</label>
+                              <input class="radio-btn__control" type="radio" name="download" id="download-false">
+                              <label class="radio-btn__box radio-btn__box--check" for="download-false"><span class="radio-btn__icon radio-btn__icon--check"></span>Без фото</label>
                             </div>
-                            <div class="gender__notify notify">Если Вы не нашли нужное имя, то впишите его в данном поле и мы в течении 2-х дней дозапишем его. Стоимость записи имени (имен) 25 грн.</div>
-                          </div><!-- /.gender__group -->
-                        </div><!-- /.gender__item -->
-                      </div><!-- /.gender -->
-                    </div><!-- /.tabs__item -->
-                    <div class="tabs__item" id="tab-4">
-                      <div class="row download">
-                        <div class="col-md-12 text-center download__heading">Загрузите фотографию ребёнка. Фотография ребёнка появится в Книге <br>Деда Мороза</div>
-
-                        <form class="col-md-5 col-md-offset-1 text-center download__form" enctype="multipart" method="post">
-                          <label for="original-photo" class="download__btn">
-                            <input id="original-photo" class="download__file" type="file" name="photo" accept=".jpg, .png, .jpeg, .gif, .bmp, .tif, .tiff|images/*">
-                            Загрузить фотографию
-                          </label>
-                        </form> 
-                        <div class="col-md-6">
-                          <p class="download__warning warning">Поддерживаемые форматы фотографии: jpg, bmp, png</p>
-                        </div>
-                        <div class="col-md-4 col-md-offset-4">
-                          <div class="download__select radio-btn">
-                            <input class="radio-btn__control" type="radio" name="download" id="download-true" data-toggle="cost" data-price="15" data-description="1 фотография" data-title="Просмотр фотографии:" checked>
-                            <label class="radio-btn__box radio-btn__box--check" for="download-true"><span class="radio-btn__icon radio-btn__icon--check"></span>Добавить фото</label>
                           </div>
-                          <div class="download__select radio-btn">
-                            <input class="radio-btn__control" type="radio" name="download" id="download-false">
-                            <label class="radio-btn__box radio-btn__box--check" for="download-false"><span class="radio-btn__icon radio-btn__icon--check"></span>Без фото</label>
+                          <div class="col-md-12 text-center">
+                            <div class="download__notify notify">Просмотр форографии ребенка с Дедом Морозом + 15 грн</div>
                           </div>
-                        </div>
-                        <div class="col-md-12 text-center">
-                          <div class="download__notify notify">Просмотр форографии ребенка с Дедом Морозом + 15 грн</div>
-                        </div>
-                      </div><!-- /.download -->
-                    </div><!-- /.tabs__item -->
-                    <div class="clearfix tabs__item" id="tab-5">
-                      <form class="clearfix modal__form" method="post">
+                        </div><!-- /.download -->
+                      </div><!-- /.tabs__item -->
+                      <div class="clearfix tabs__item" id="tab-5">
+                        <form class="clearfix modal__form" method="post">
 
-                        <div class="form-group col-xs-12 col-sm-6">
-                          <input aria-invalid="false" class="form-control modal__input form__name" placeholder="Введите ваше имя" required data-validation-required-message="Please enter your name." name="name" type="text">
-                        </div>
-                        <div class="form-group col-xs-12 col-sm-6">
-                          <input aria-invalid="false" class="form-control modal__input form__phone" placeholder="Введите номер телефона" required data-validation-required-message="Please enter your phone number." name="phone" type="tel">
-                        </div>
-                        <div class="form-group col-xs-12 col-sm-6">
-                          <input aria-invalid="false" class="form-control modal__input form__mail" placeholder="Введите ваш E-mail" required data-validation-required-message="Please enter your email." name="email" type="email">
-                        </div>
-                      </form>
-                      <div class="order__warning warning">На указанный вами адрес электронной почты придёт ссылка для
-                            скачивания видеопоздравления. Чтобы избежать попадания нашего письма в спам-фильтры, рекомендуем
-                            не указывать адрес корпоративной почты, а указывать адрес вашей личной электронной почты.</div>
-                      <div class="row">
-                        <div class="col-md-6 form-group order__promo promo">
-                          <input class="form-control" name="promo" type="text" placeholder="Введите промокод">
-                        </div>
-                        <div class="col-md-6"><div class="notify">Если у вас нет промокода, оставьте это поле пустым</div></div>
-                      </div><!-- /.row -->
-                      <div class="order__price price">
-                        <div class="price__heading">Ваш заказ</div>
-                          <table class="table">
-                            <tbody class="result"></tbody>
-                          </table>
-                        <div class="text-right price__total">Итоговая сумма заказа: <span class="price__cost"></span></div>
-                      </div><!-- /.price -->
-                    </div><!-- /.tabs__item -->
-                  </div><!-- /.tabs -->
-                </div><!-- /.order__body -->
-                <div class="order__footer navigation">
-                  <a class="navigation__btn navigation__btn--prev">Вернуться назад</a>
-                  <button class="navigation__btn navigation__btn--next">Далее</button>
-                </div><!-- /.order__footer -->
-              </div><!-- /.order__box -->
-            </div><!-- /.col-md-10 -->
+                          <div class="form-group col-xs-12 col-sm-6">
+                            <input aria-invalid="false" class="form-control modal__input form__name" placeholder="Введите ваше имя" name="name" type="text">
+                          </div>
+                          <div class="form-group col-xs-12 col-sm-6">
+                            <input aria-invalid="false" class="form-control modal__input form__phone" placeholder="Введите номер телефона" name="phone" type="tel">
+                          </div>
+                          <div class="form-group col-xs-12 col-sm-6">
+                            <input aria-invalid="false" class="form-control modal__input form__mail" placeholder="Введите ваш E-mail" name="mail" type="text">
+                          </div>
+                        </form>
+                        <div class="order__warning warning">На указанный вами адрес электронной почты придёт ссылка для
+                              скачивания видеопоздравления. Чтобы избежать попадания нашего письма в спам-фильтры, рекомендуем
+                              не указывать адрес корпоративной почты, а указывать адрес вашей личной электронной почты.</div>
+                        <div class="row">
+                          <div class="col-md-6 form-group order__promo promo">
+                            <input class="form-control" name="promo" type="text" placeholder="Введите промокод">
+                          </div>
+                          <div class="col-md-6"><div class="notify">Если у вас нет промокода, оставьте это поле пустым</div></div>
+                        </div><!-- /.row -->
+                        <div class="order__price price">
+                          <div class="price__heading">Ваш заказ</div>
+                            <table class="table">
+                              <tbody class="result"></tbody>
+                            </table>
+                          <div class="text-right price__total">Итоговая сумма заказа: <span class="price__cost"></span></div>
+                        </div><!-- /.price -->
+                      </div><!-- /.tabs__item -->
+                    </div><!-- /.tabs -->
+                  </div><!-- /.order__body -->
+                  <div class="order__footer navigation">
+                    <a class="navigation__btn navigation__btn--prev">Вернуться назад</a>
+                    <button class="navigation__btn navigation__btn--next navigation__btn--red" form="form1">Далее</button>
+                    <button type="submit" class="navigation__btn navigation__btn--red navigation__btn--submit" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i>">Отправить</button>
+                  </div><!-- /.order__footer -->
+                </div><!-- /.order__box -->
+              </div><!-- /.col-md-10 -->
+            </form><!-- /.contactForm -->
           </div><!-- /.row -->
         </div><!-- /.container -->
       </section><!-- /.order -->

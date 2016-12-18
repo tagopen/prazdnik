@@ -9,36 +9,78 @@ $(function() {
             event.preventDefault(); // prevent default submit behaviour
             $("[type=submit]").prop("disabled", true).button('loading'); //prevent submit behaviour and display preloading
             // get values from FORM
-            var form = $form.attr("name");
-            var name = $form.find("[name=name]").val();
-            var email = $form.find("[name=email]").val();
-            var phone = $form.find("[name=phone]").val();
-            var message = $form.find("[name=message]").val();
-            var firstName = name; // For Success/Failure Message
-            // Check for white space in name for Success/Fail message
-            if (firstName.indexOf(' ') >= 0) {
-                firstName = name.split(' ').slice(0, -1).join(' ');
+            var data = new FormData();
+
+            var form = $('.contactForm').attr("name");
+            var customerID = $.cookie('personalID');
+            var package = $('[name=package]:checked').siblings('.checkbox-btn__box').text() + ' (+' + $('[name=package]:checked').data('price') + ' гривен)';
+            if ($('#rbtn2').is(':checked')) {
+                var childrean = $('.child__btn [name=radiobtn]:checked').siblings('.checkbox-btn__box').text() + ' (+' + $('#rbtn2').data('price') + ' гривен)';
+            } else {
+                var childrean = $('.child__btn [name=radiobtn]:checked').siblings('.checkbox-btn__box').text()
             }
+            //child-1
+            if ($('#addChild-1').is(':checked')) {
+                var child1_name =  $('#addChild-1').data('title') + ' ' +
+                                   $('#childrean-1').find('[name=gender]:checked').siblings('.radio-btn__box').text() + ' - ' +
+                                   $('#childrean-1').find('[type=text]').val() + ' (+ ' + 
+                                   $('#addChild-1').data('price') + ' гривен)';
+            } else {
+                var child1_name =  $('#childrean-1').find('.gender__select--active option:selected').text();
+                var child2_name = 'нет';
+            }
+            //child-2
+            if (!($('#childrean-2').is('.gender__item--hidden'))) {
+                if ($('#addChild-2').is(':checked')) {
+                    var child2_name = $('#addChild-2').data('title') + ' ' +
+                                      $('#childrean-2').find('[name=childrean]:checked').siblings('.radio-btn__box').text() + ' - ' +
+                                      $('#childrean-2').find('[type=text]').val() + ' (+ ' + 
+                                      $('#addChild-2').data('price') + ' гривен)';
+                } else {
+                    var child2_name = $('#childrean-2').find('.gender__select--active option:selected').text();
+                }
+            }
+            //download file
+            if ($('#download-false').is(':checked')) {
+                var photo = $('#download-false').siblings('.radio-btn__box').text();
+            } else {
+                var photo = $('#download-true').data('title') + ' (+ '+
+                          + $('#download-true').data('price') + ' гривен)';
+            }
+            var str = $('.download__file').val().split('\\');
+            var filename = str[str.length-1];
+            var file = $('input[type=file]')[0];
+            var email = $('.modal__form').find("[name=mail]").val();
+            var phone = $('.modal__form').find("[name=phone]").val();
+            var name = $('.modal__form').find("[name=name]").val();
+            var promo = $('[name=promo]').val();
+            var fullcost = $('.price__cost').text();
+
+            if (form) { data.append('user_form', form)}
+            if (customerID) { data.append('user_customerID', customerID)}
+            if (package) { data.append('user_package', package)}
+            if (childrean) { data.append('user_childrean', childrean)}
+            if (photo) { data.append('user_photo', photo)}
+            if (child1_name) { data.append('child1_name', child1_name)}
+            if (child2_name) { data.append('child2_name', child2_name)}
+            if (filename) { data.append('user_filename', filename)}         
+            if (email) { data.append('user_email', email)}
+            if (phone) { data.append('user_phone', phone)}
+            if (name) { data.append('user_name', name)}
+            if (promo) { data.append('user_promo', promo)}
+            if (fullcost) { data.append('user_fullcost', fullcost)}
+            if (file)    { data.append('user_file', file.files[0]); }
+
             $.ajax({
-                url: "././mail/contact_me.php",
+                url: "././mail/mail.php",
                 type: "POST",
-                data: {
-                    form: form,
-                    name: name,
-                    phone: phone,
-                    email: email,  
-                    message: message
-                },
+                data: data,
+                dataType: 'text',
+                processData: false,
+                contentType: false,
                 cache: false,
                 success: function() {
                     // Success message
-                    $('.success').html("<div class='alert alert-success'>");
-                    $('.success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                        .append("</button>");
-                    $('.success > .alert-success')
-                        .append("<strong>Ваше сообщение успешно отправлено. В ближайшее время наши менеджеры свяжутся с вами! </strong>");
-                    $('.success > .alert-success')
-                        .append('</div>');
 
                     // remove prevent submit behaviour and disable preloading
                     $("[type=submit]").prop("disabled", false).button('reset');  
@@ -48,12 +90,7 @@ $(function() {
                 },
                 error: function() {
                     // Fail message
-                    $('.success').html("<div class='alert alert-danger'>");
-                    $('.success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                        .append("</button>");
-                    $('.success > .alert-danger').append("<strong>Приносим свои извинения, " + firstName + ", но наш почтовый сервер времено не работает. Попробуйте, отправить сообщение еще раз и сообщите нам о проблеме!");
-                    $('.success > .alert-danger').append('</div>');
-
+                    
                     // remove prevent submit behaviour and disable preloading
                     $("[type=submit]").prop("disabled", false).button('reset'); 
 

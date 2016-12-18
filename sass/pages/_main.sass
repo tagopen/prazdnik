@@ -1,7 +1,63 @@
 +comment('general style')
 body
+  overflow-x: hidden
   background: #6d1411 url(../img/icons/bg-order.png) repeat-y scroll center center
 +ic
+.navbar
+  z-index: 10
+  &__container
+    position: relative
+  &__icon
+    position: absolute
+    top: -30px
+    z-index: 10
+    &--left
+      left: -368px
+      &:before
+        width: 368px
+        height: 404px
+        background: transparent url(../img/icons/tree-left.png) no-repeat 0 0
+    &--right
+      right: -377px
+      &:before
+        width: 337px
+        height: 350px
+        background: transparent url(../img/icons/tree-right.png) no-repeat 0 0
+  &__btn
+    padding: 9px 32px !important
+    font: 900 14px/24px 'MuseoSansCyrl', sans-serif !important
+    color: #fff !important
+.navbar-nav
+  display: inline-block
+  float: none
+.navbar-default
+  top: 0
+  left: 0
+  right: 0
+  padding: 15px 0 55px
+  border-color: transparent
+  background: transparent url(../img/navbar-affix.png) no-repeat scroll bottom center
+  .navbar-nav > li > a
+    margin: 0 17px 
+    font: 400 18px/20px 'PT Sans', sans-serif
+    color: #000
+
+.video-btn
+  display: block
+  padding: 14px
+  margin: 17px 0
+  border: none
+  +background-image(linear-gradient(to top, #ff4800 0%, #ffae00 100%))
+  +border-radius(10px)
+  box-shadow: 0 6px 0 #d42d00
+  font: 900 18px/24px 'MuseoSansCyrl', sans-serif
+  text-align: center
+  color: #fff
+  &:hover,
+  &:focus
+    color: #fff
+    text-decoration: none
+    outline: none
 .img-responsive
   margin: 0 auto
 .heading
@@ -18,117 +74,123 @@ body
   padding-left: 32px
   background: transparent url(../img/icons/notify.png) no-repeat scroll top left
   min-height: 21px
-+cm('easter egg')
-.rope
-  position: absolute
-  top: -50%
-  right: 125px
-  width: 115px
-  text-align: center
-  +transition(.7s ease-out opacity)
-  z-index: 999
-  &__icon
-    position: relative
-    top: 40px
-    color: #fff
-.ic-rope
-  position: relative
-  width: 115px
-  height: 656px
-  background: url(../img/rope.png)
-  cursor: pointer
-  &:before
-    content: 'slide down the rope'
-    display: block
-    position: absolute
-    width: 150px
-    top: 100%
-    color: #fff
-
-@-webkit-keyframes vertical 
-  0% 
-    -webkit-transform: translate(0,-3px)
-    transform: translate(0,-3px)
-  
-
-  4% 
-    -webkit-transform: translate(0,3px)
-    transform: translate(0,3px)
-  
-
-  8% 
-    -webkit-transform: translate(0,-3px)
-    transform: translate(0,-3px)
-  
-
-  12% 
-    -webkit-transform: translate(0,3px)
-    transform: translate(0,3px)
-  
-
-  16% 
-    -webkit-transform: translate(0,-3px)
-    transform: translate(0,-3px)
-  
-
-  20% 
-    -webkit-transform: translate(0,3px)
-    transform: translate(0,3px)
-  
-
-  22% 
-    -webkit-transform: translate(0,0)
-    transform: translate(0,0)
-  
-
-
-@keyframes vertical 
-  0% 
-    -webkit-transform: translate(0,-3px)
-    -ms-transform: translate(0,-3px)
-    transform: translate(0,-3px)
-  
-
-  4% 
-    -webkit-transform: translate(0,3px)
-    -ms-transform: translate(0,3px)
-    transform: translate(0,3px)
-  
-
-  8% 
-    -webkit-transform: translate(0,-3px)
-    -ms-transform: translate(0,-3px)
-    transform: translate(0,-3px)
-  
-
-  12% 
-    -webkit-transform: translate(0,3px)
-    -ms-transform: translate(0,3px)
-    transform: translate(0,3px)
-  
-
-  16% 
-    -webkit-transform: translate(0,-3px)
-    -ms-transform: translate(0,-3px)
-    transform: translate(0,-3px)
-  
-
-  20% 
-    -webkit-transform: translate(0,3px)
-    -ms-transform: translate(0,3px)
-    transform: translate(0,3px)
-  
-
-  22% 
-    -webkit-transform: translate(0,0)
-    -ms-transform: translate(0,0)
-    transform: translate(0,0)
-  
-.faa-vertical.animated,
-.faa-vertical.animated-hover:hover,
-.faa-parent.animated-hover:hover > .faa-vertical
-  -webkit-animation: vertical 2s ease infinite
-  animation: vertical 2s ease infinite
+.validate-error
+  box-shadow: 0 0 0 1px #d33!important
+  background: #ffc6c6!important
+.btn-blocked
+  background: #bababa!important
+//+cm('easter egg')
+//.rope
+//  position: absolute
+//  top: -50%
+//  right: 125px
+//  width: 115px
+//  text-align: center
+//  +transition(.7s ease-out opacity)
+//  z-index: 999
+//  &__icon
+//    position: relative
+//    top: 40px
+//    color: #fff
+//
+//.ic-rope
+//  position: relative
+//  width: 115px
+//  height: 656px
+//  background: url(../img/rope.png)
+//  cursor: pointer
+//  &:before
+//    content: 'slide down the rope'
+//    display: block
+//    position: absolute
+//    width: 150px
+//    top: 100%
+//    color: #fff
+//
+//@-webkit-keyframes vertical 
+//  0% 
+//    -webkit-transform: translate(0,-3px)
+//    transform: translate(0,-3px)
+//  
+//
+//  4% 
+//    -webkit-transform: translate(0,3px)
+//    transform: translate(0,3px)
+//  
+//
+//  8% 
+//    -webkit-transform: translate(0,-3px)
+//    transform: translate(0,-3px)
+//  
+//
+//  12% 
+//    -webkit-transform: translate(0,3px)
+//    transform: translate(0,3px)
+//  
+//
+//  16% 
+//    -webkit-transform: translate(0,-3px)
+//    transform: translate(0,-3px)
+//  
+//
+//  20% 
+//    -webkit-transform: translate(0,3px)
+//    transform: translate(0,3px)
+//  
+//
+//  22% 
+//    -webkit-transform: translate(0,0)
+//    transform: translate(0,0)
+//  
+//
+//
+//@keyframes vertical 
+//  0% 
+//    -webkit-transform: translate(0,-3px)
+//    -ms-transform: translate(0,-3px)
+//    transform: translate(0,-3px)
+//  
+//
+//  4% 
+//    -webkit-transform: translate(0,3px)
+//    -ms-transform: translate(0,3px)
+//    transform: translate(0,3px)
+//  
+//
+//  8% 
+//    -webkit-transform: translate(0,-3px)
+//    -ms-transform: translate(0,-3px)
+//    transform: translate(0,-3px)
+//  
+//
+//  12% 
+//    -webkit-transform: translate(0,3px)
+//    -ms-transform: translate(0,3px)
+//    transform: translate(0,3px)
+//  
+//
+//  16% 
+//    -webkit-transform: translate(0,-3px)
+//    -ms-transform: translate(0,-3px)
+//    transform: translate(0,-3px)
+//  
+//
+//  20% 
+//    -webkit-transform: translate(0,3px)
+//    -ms-transform: translate(0,3px)
+//    transform: translate(0,3px)
+//  
+//
+//  22% 
+//    -webkit-transform: translate(0,0)
+//    -ms-transform: translate(0,0)
+//    transform: translate(0,0)
+//  
+//.faa-vertical.animated,
+//.faa-vertical.animated-hover:hover,
+//.faa-parent.animated-hover:hover > .faa-vertical
+//  -webkit-animation: vertical 2s ease infinite
+//  animation: vertical 2s ease infinite
 .flip 
   &--active
     .flip__box
@@ -268,7 +330,7 @@ body
       margin-top: 25px
       float: left
       border-bottom: 1px dashed #000
-    &--next
+    &--red
       padding: 15px 50px
       background: linear-gradient(to bottom,#e23e3b 0,#da262c 100%) 
       color: #fff
@@ -277,6 +339,8 @@ body
       border: 0
       font-size: 25px
       +br(5px) 
+    &--submit
+      display: none
 
 +comment('package style')
 .package  
@@ -410,6 +474,11 @@ body
     text-shadow: 0 -1px 0 #ed8603
     color: #fff
     cursor: pointer
+  &__preview
+    margin-bottom: 20px
+    text-align: center
+  &__preload
+    color: #ce6200
 .price
   &__heading
     margin-bottom: 20px
